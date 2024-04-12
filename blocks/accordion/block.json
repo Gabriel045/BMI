@@ -1,0 +1,22 @@
+{
+    "name": "acf/accordion",
+    "title": "Accordion",
+    "description": "A custom Accordion for the normal pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Accordion"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/accordion/screenshot.png"
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "acf/testimonial",
+    "title": "Testimonial",
+    "description": "A custom Testimonial for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Testimonial"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "testimonial.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/testimonial/screenshot.png"
+            }
+        }
+    }
+}

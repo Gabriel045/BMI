@@ -1,0 +1,22 @@
+{
+    "name": "acf/steps-image",
+    "title": "Steps Image",
+    "description": "A custom Steps Image for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Steps Image"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "steps-image.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/steps-image/screenshot.png"
+            }
+        }
+    }
+}

@@ -35,6 +35,24 @@ function af_add_theme_scripts() {
         'tailwind',
         get_template_directory_uri() . '/dist/output.css',
     );
+
+
+    // slick
+    wp_enqueue_style(
+        'slick-css',
+        get_template_directory_uri() . '/assets/slick/slick.css',
+    );
+    wp_enqueue_style(
+        'slick-theme',
+        get_template_directory_uri() . '/assets/slick/slick-theme.css',
+    );
+    wp_enqueue_script(
+        'slick-js',
+        get_template_directory_uri() . '/assets/slick/slick.min.js',
+        ['jquery'],
+        theme_version,
+        true
+    );
 }
 
 
@@ -70,4 +88,24 @@ if (function_exists('acf_add_options_page')) {
             'redirect'      => false
         ));
     }
+}
+
+
+/**
+ * @snippet WooCommerce User Login Shortcode
+ * @how-to Get CustomizeWoo.com FREE
+ * @author Rodolfo Melogli
+ * @compatible WooCommerce 7
+ * @community https://businessbloomer.com/club/
+ */
+
+add_shortcode('wc_login_form_bbloomer', 'bbloomer_separate_login_form');
+
+function bbloomer_separate_login_form()
+{
+    if (is_user_logged_in()) return '<p>You are already logged in</p>';
+    ob_start();
+    do_action('woocommerce_before_customer_login_form');
+    woocommerce_login_form(array('redirect' => wc_get_page_permalink('home')));
+    return ob_get_clean();
 }

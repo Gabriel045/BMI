@@ -1,0 +1,22 @@
+{
+    "name": "acf/blue-colunms",
+    "title": "Blue Colunms",
+    "description": "A custom Blue Colunms for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Blue Colunms"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "blue-colunms.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/blue-colunms/screenshot.png"
+            }
+        }
+    }
+}

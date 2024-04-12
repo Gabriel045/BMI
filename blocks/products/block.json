@@ -1,0 +1,22 @@
+{
+    "name": "acf/products",
+    "title": "Products",
+    "description": "A custom Products for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Products"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "products.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/products/screenshot.png"
+            }
+        }
+    }
+}

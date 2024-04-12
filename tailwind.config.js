@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Montserrat': ['Montserrat', 'sans-serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
       },
 
       colors: {
+        'blue': '#E4EAFF',
+        'dark-blue': '#21316A',
+        'gray': '#475467',
       },
       height: {
       },

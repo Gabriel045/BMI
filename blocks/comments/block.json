@@ -1,0 +1,22 @@
+{
+    "name": "acf/comments",
+    "title": "Comments",
+    "description": "A custom Comments for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Comments"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "comments.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/comments/screenshot.png"
+            }
+        }
+    }
+}
