@@ -42,17 +42,17 @@ $cards        = get_field('cards');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[112px] pt-[100px] pb-[100px] lg:pb-0 relative">
-        <div class="flex flex-col gap-y-[100px]">
+    <div class="block_content px-[30px] lg:px-[112px]  pb-[100px] lg:pb-0 relative">
+        <div class="flex flex-col  gap-y-[100px]">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="flex gap-[5%]">
+                <div class="flex gap-[5%] lg:flex-nowrap flex-wrap flex-col-reverse lg:flex-row">
                     <div class="w-full lg:w-[55%]">
-                        <span class="flex w-fit text-[20px] text-gray bg-blue py-[8px] px-[30px] rounded-[30px]">Step <?php echo $key + 1 ?></span>
+                        <span class="flex w-fit text-[16px] lg:text-[20px] text-gray bg-blue py-[8px] px-[30px] rounded-[30px] mt-[60px] lg:mt-0">Step <?php echo $key + 1 ?></span>
                         <h2 class="my-[30px]"> <?php echo $card["title"]  ?> </h2>
                         <p class="mt-[20px] text-[16px] text-[gray] leading-[24px]"><?php echo $card["text"] ?></p>
                         <div class="mt-[30px] flex flex-col gap-y-[20px]">
                             <?php foreach ($card["features"]  as $check) : ?>
-                                <span class="w-fit flex text-[14px] lg:text-[16px] leading-[20px] text-gray px-[30px] py-[8px] bg-blue rounded-[34px]">
+                                <span class="w-fit flex text-[14px] lg:text-[16px] leading-[20px] text-gray px-[30px] py-[8px] bg-blue rounded-[15px] lg:rounded-[34px]">
                                     <img class="mr-[10px] mt-[2px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg">
                                     <?php echo $check["text"] ?>
                                 </span>

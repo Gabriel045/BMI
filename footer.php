@@ -2,12 +2,12 @@
     <section>
         <div class="block_content px-[30px] lg:px-[112px] pt-[100px] pb-[24px]">
             <div class="flex flex-wrap lg:flex-nowrap">
-                <div class="w-full lg:w-[40%] flex justify-center lg:justify-start">
+                <div class="w-full lg:w-[30%] xl:w-[40%] flex justify-center lg:justify-start">
                     <figure class="w-[190px]">
                         <img class="w-full" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
                     </figure>
                 </div>
-                <div class="w-full lg:w-[50%] flex flex-wrap lg:flex-nowrap ">
+                <div class="w-full lg:w-[70%] xl:w-[60%] flex flex-wrap lg:flex-nowrap ">
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Have a Question?</span>
                         <a target="_blank" href="mailto:hellow@bmimd.com" class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">hellow@bmimd.com</a>

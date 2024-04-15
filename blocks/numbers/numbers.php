@@ -37,24 +37,19 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
-
-$number     = get_field('number_of_columns');
-$cards      = get_field('cards');
+$cards        = get_field('cards');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[112px] pb-[100px] relative">
-        <div class="px-[50px] py-[75px] flex flex-wrap gap-[2%] bg-blue rounded-[38px] gap-y-[50px] relative z-[99]">
-            <?php foreach ($cards as $key => $card) : ?>
-                <div class="w-full md:w-[48%] <?php echo $number == 4 ? 'lg:w-[23.5%]' : 'lg:w-[32%]' ?>">
-                    <figure class="flex justify-center">
-                        <img src="<?php echo $card["image"] ?>" alt="">
-                    </figure>
-                    <p class="text-[18px] text-dark-blue font-[600] my-[15px] text-center"><?php echo $card["title"] ?></p>
-                    <p class="text-[14px] text-gray text-center leading-[20px]"><?php echo $card["text"] ?></p>
+    <div class="block_content px-[30px] lg:px-[112px] ">
+        <div class="flex flex-wrap lg:flex-nowrap justify-between gap-y-[50px]">
+            <?php  foreach ($cards as $key => $card) : ?>
+                <div class="w-full lg:w-auto flex flex-col lg:gap-y-[20px]">
+                    <h2 class="text-center"><?php echo $card["numbers"] ?></h2>
+                    <p class="text-[16px] text-gray text-center"><?php echo $card["text"] ?></p>
+
                 </div>
             <?php endforeach ?>
         </div>
-        <img class="absolute left-0 bottom-[-80px] lg:top-[0px] scale-x-[-1] rotate-[-80deg] lg:rotate-[40deg] lg:row-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
     </div>
 </section>

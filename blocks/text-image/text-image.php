@@ -46,22 +46,45 @@ $cta            =  get_field('cta');
 
 ?>
 
-<section id="text-image" class="<?php echo $background == "Blue" ? 'bg-blue' : 'bg-white' ?>">
-    <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative">
-        <div class="flex flex-wrap lg:flex-nowrap lg:flex-row  lg:gap-[100px] <?php echo $image_position == "Right" ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col flex-col lg:flex-row' ?>">
-            <div class="w-full lg:w-[45%] flex">
-                <figure class="w-full relative z-[99]">
-                    <img class="w-full rounded-[20px] object-cover h-[446px] lg:h-full" src="<?php echo esc_url($image) ?>">
-                </figure>
-            </div>
-            <div class="w-full lg:w-[55%] flex flex-col justify-center mt-[50px] lg:mt-0">
-                <h2 class=""> <?php echo $title ?></h2>
-                <div class="my-[30px] text-gray"><?php echo $text ?></div>
-                <div class="w-fit mt-[50px]">
-                    <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
+<section id="text-image" class="<?php echo $background == "Blue" ? 'bg-blue' : 'bg-white' ?> ">
+    <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative <?php echo $block['className'] ?>">
+        <?php if ($background != "Dark Blue") : ?>
+            <div class="flex flex-wrap lg:flex-nowrap lg:flex-row  lg:gap-[100px] <?php echo $image_position == "Right" ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col flex-col lg:flex-row' ?>">
+                <div class="w-full lg:w-[45%] flex">
+                    <figure class="w-full relative z-[99]">
+                        <img class="w-full rounded-[20px] object-cover h-[446px] lg:h-[584px]" src="<?php echo esc_url($image) ?>">
+                    </figure>
+                </div>
+                <div class="w-full lg:w-[55%] flex flex-col justify-center mt-[50px] lg:mt-0">
+                    <h2 class=""> <?php echo $title ?></h2>
+                    <div class="mt-[30px] text-gray"><?php echo $text ?></div>
+                    <?php if (!empty($cta["url"])) : ?>
+                        <div class="w-fit mt-[50px]">
+                            <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
+                        </div>
+                    <?php endif ?>
                 </div>
             </div>
-        </div>
-        <img class="absolute left-0 top-[50%] rotate-[80deg] translate-y-[-50%] hidden lg:block" style="filter: brightness(0) saturate(100%) invert(98%) sepia(98%) saturate(7%) hue-rotate(155deg) brightness(102%) contrast(106%);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+            <img class="absolute left-0 top-[50%] rotate-[80deg] translate-y-[-50%] hidden lg:block" style="filter: brightness(0) saturate(100%) invert(98%) sepia(98%) saturate(7%) hue-rotate(155deg) brightness(102%) contrast(106%);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+
+        <?php else : ?>
+            <div class="bg-dark-blue rounded-[31px] p-[30px] lg:p-[72px]  relative z-[99]">
+                <div class="flex flex-wrap lg:flex-nowrap gap-y-[50px]">
+                    <div class="w-full lg:w-[60%]">
+                        <h2 class="text-white"> <?php echo $title ?></h2>
+                        <div class="my-[30px] text-[#ffffff66] text-[16px]"><?php echo $text ?></div>
+                        <div class="w-fit">
+                            <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-white arrow_white"><?php echo esc_attr($cta["title"]) ?></a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-[40%]">
+                        <figure class="w-full flex justify-end">
+                            <img class="w-full rounded-[20px] object-cover lg:w-[253px] h-[253px] lg:h-[253px]" src="<?php echo esc_url($image) ?>">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <img class="absolute right-0 top-[-90px] lg:top-[16%] rotate-[98deg] scale-x-[-1] lg:scale-x-auto" style="filter: brightness(0) saturate(100%) invert(12%) sepia(25%) saturate(6480%) hue-rotate(220deg) brightness(92%) contrast(87%);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+        <?php endif ?>
     </div>
 </section>

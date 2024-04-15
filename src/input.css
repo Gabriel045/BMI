@@ -41,9 +41,9 @@ section {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    position: relative;
+    /*position: relative;
+    z-index: 1;*/
     width: 100%;
-    z-index: 1;
 }
 
 .block_content {
@@ -378,6 +378,16 @@ p{
     height: 14px;
 }
 
+.arrow_white::after{
+    content:"";
+    background-image: url('../assets/images/Vector.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 15px;
+    height: 14px;
+    filter: brightness(0) saturate(100%) invert(13%) sepia(91%) saturate(1354%) hue-rotate(209deg) brightness(95%) contrast(89%);
+}
+
 /* the slides */
 .slick-slide {
     margin: 0 20px !important;
@@ -491,6 +501,19 @@ p{
 
 #multiple-steps {
     display: none !important;
+}
+
+.text-\[16px\] p{
+    font-size: 16px !important;
+    line-height: normal;
+}
+
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px;
 }
 
 @media screen and (max-width:1024px){

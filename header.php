@@ -16,20 +16,20 @@
   <header class="overflow-x-clip relative flex justify-center">
     <section>
       <div class="block_content px-[30px] lg:px-[112px] py-[20px] flex flex-row z-[99]">
-        <div class="w-[60%] lg:w-[20%] flex items-center">
+        <div class="w-[60%] lg:w-[22%] xl:w-[20%] flex items-center">
           <a href="/">
             <figure class="w-[145px]">
               <img class="w-full" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
             </figure>
           </a>
         </div>
-        <div id="menu-dektop" class="w-[50%] hidden lg:flex justify-start items-center gap-[25px]">
+        <div id="menu-dektop" class="w-[45%] xl:w-[50%] hidden lg:flex justify-start items-center gap-[25px]">
           <?php echo  wp_nav_menu(array(
             'menu'   => 'Header Menu',
           ));  ?>
 
         </div>
-        <div class="w-[40%] lg:w-[30%] flex  items-center justify-end lg:justify-normal gap-[10px]">
+        <div class="w-[40%] xl:w-[30%] flex  items-center justify-end lg:justify-normal gap-[10px]">
           <span class="inline-block lg:hidden cursor-pointer menu-mobile">
             <div class="" id="nav-icon4">
               <span></span>

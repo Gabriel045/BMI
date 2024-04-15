@@ -85,21 +85,21 @@ $text       = get_field('text');
             </div>
         <?php else : ?>
             <div class="h-[1px] w-full bg-[#E4E4E4]"></div>
-            <div class="my-[100px] flex flex-col items-center">
+            <div class="my-[100px] lg:mb-[100px] mb-[50px] flex flex-col items-center">
                 <h2 class="text-center"><?php echo $title ?></h2>
                 <p class="text-center mt-[20px] lg:w-[70%]"><?php echo $text ?></p>
             </div>
-            <div class="flex gap-[10px] flex-row flex-wrap ">
+            <div class="flex gap-[50px] lg:gap-[10px] flex-row flex-wrap ">
                 <?php foreach ($cards as $key => $card) : ?>
-                    <div class="w-[49%]">
+                    <div class="w-full lg:w-[49%]">
                         <div class="w-full rounded-[20px] py-[70px] bg-blue z-[99]">
                             <figure class="flex justify-center">
                                 <img class="w-[215px] h-[445px]" src="<?php echo  $card["image"] ?>" alt="">
                             </figure>
                         </div>
                         <div class="mt-[50px]">
-                            <h2><?php echo $card["title"] ?></h2>
-                            <div class="w-full my-[30px] flex flex-row gap-[20px]">
+                            <h2 class="text-[36px] leading-[44px]"><?php echo $card["title"] ?></h2>
+                            <div class="w-full my-[30px] flex flex-row flex-wrap gap-[20px]">
                                 <?php foreach ($card["checks"]  as $check) : ?>
                                     <span class="w-fit flex text-[14px] leading-[20px] text-gray px-[20px] py-[8px] bg-blue rounded-[34px]">
                                         <?php echo $check["text"] ?>
@@ -115,8 +115,8 @@ $text       = get_field('text');
                     </div>
                 <?php endforeach ?>
             </div>
-            <img class="absolute right-[-90px] lg:top-[750px] rotate-[-27deg] scale-x-[-1]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
-            <img class="absolute left-[-90px] lg:top-[250px] rotate-[-27deg] scale-x-[-1]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+            <img class="absolute right-[-90px] lg:top-[750px] rotate-[-27deg] scale-x-[-1] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+            <img class="absolute right-[15px] lg:right-auto bottom-[-80px] lg:bottom-auto lg:left-[-90px] lg:top-[250px] rotate-[-95deg] lg:rotate-[-27deg] scale-x-[-1]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
         <?php endif ?>
     </div>
 </section>

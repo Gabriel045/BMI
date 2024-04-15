@@ -42,6 +42,8 @@ $title          = get_field("title");
 $text           = get_field("text");
 $cta            = get_field("cta");
 $faqs           = get_field('faqs');
+
+var_dump(get_query_var('product'));
 ?>
 
 <section id="faq" class="<?php echo $background == "Blue"  ? 'bg-blue' : 'bg-white' ?>">
@@ -57,9 +59,11 @@ $faqs           = get_field('faqs');
         <?php if (!empty($text)) : ?>
             <p class="mt-[30px] text-gray lg:w-[65%]"><?php echo $text ?></p>
         <?php endif ?>
-        <div class="w-fit mt-[30px] lg:hidden block">
-            <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
-        </div>
+        <?php if (!empty($cta["url"])) : ?>
+            <div class="w-fit mt-[30px] lg:hidden block">
+                <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
+            </div>
+        <?php endif ?>
         <div class="mt-[50px] <?php echo $background == "Blue"  ? 'lg:mt-[112px]' : 'lg:mt-[50px]' ?> ">
             <?php foreach ($faqs as $key => $item) : ?>
                 <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0  border-b-[1px] <?php echo $background == "Blue"  ? 'border-white ' : 'border-[#E4E4E4] ' ?> z-[99] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">

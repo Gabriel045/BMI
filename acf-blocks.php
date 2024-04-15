@@ -15,4 +15,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/accordion');
     register_block_type(__DIR__ . '/blocks/blue-colunms');
     register_block_type(__DIR__ . '/blocks/steps-image');
+    register_block_type(__DIR__ . '/blocks/numbers');
 }
