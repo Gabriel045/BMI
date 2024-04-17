@@ -1,0 +1,22 @@
+{
+    "name": "acf/product-weight",
+    "title": "Product Weight",
+    "description": "A custom Product Weight for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Product Weight"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "product-weight.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/product-weight/screenshot.png"
+            }
+        }
+    }
+}

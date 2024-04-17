@@ -516,6 +516,34 @@ p{
     padding-top: 0px;
 }
 
+.lg\:rotate-\[354deg\]{
+    --tw-rotate: 354deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.dashed{
+    &::before {
+        content: "";
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233333332b' stroke-width='4' stroke-dasharray='10' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+        height: 100%;
+        width: 2px;
+        position: absolute;
+        left: 0;
+        top: 15px;
+    }
+
+    .dot::before{
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background: #21316A;
+        border-radius: 50%;
+        left: -38px;
+        top: 15px;
+    }
+}
+
 @media screen and (max-width:1024px){
     h1{
         color: #21316A;

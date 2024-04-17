@@ -1,0 +1,22 @@
+{
+    "name": "acf/product-static",
+    "title": "Product Static",
+    "description": "A custom Product Static for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Product Static"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "product-static.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/product-static/screenshot.png"
+            }
+        }
+    }
+}

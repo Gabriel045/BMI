@@ -42,6 +42,7 @@ $cards      = get_field('cards');
 $position   = get_field('position');
 $title      = get_field('title');
 $text       = get_field('text');
+
 ?>
 
 <section class="">
@@ -53,7 +54,7 @@ $text       = get_field('text');
                     <div class="flex md:flex-nowrap flex-wrap  gap-[28px] w-full <?php echo ($key % 2 == 0) ? "flex-row" :  "flex-row-reverse"  ?>">
                         <div class="w-full md:w-[40%] rounded-[20px] py-[70px] bg-blue z-[99]">
                             <figure class="flex justify-center">
-                                <img class="w-[215px] h-[445px]" src="<?php echo  $card["image"] ?>" alt="">
+                                <img class="w-[215px] h-[445px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
                             </figure>
                         </div>
                         <div class="w-full md:w-[60%] rounded-[20px] px-[50px] py-[60px] bg-blue z-[99]">
@@ -71,6 +72,12 @@ $text       = get_field('text');
                                 </div>
                             </div>
                             <p class="mt-[30px] text-[16px] text-[#475467] leading-normal"> <?php echo $card["text"] ?></p>
+                            <div class="text-[24px] font-[600] text-dark-blue mt-[30px]">
+                                <?php echo $card["price"] ?> <span class="text-[12px] font-[400] text-gray"> / month</span>
+                            </div>
+                            <?php foreach ($card["warnings"] as $key => $warning) : ?>
+                                <span class="text-[10px] text-[#21316a80]  block mt-[15px]"><?php echo $warning["text"] ?></span>
+                            <?php endforeach ?>
                             <div class="w-fit mt-[30px]">
                                 <a href="<?php echo esc_url($card["cta"]["url"]) ?>" target="<?php echo esc_attr($card["cta"]["target"]) ?>" class="btn-blue"><?php echo esc_attr($card["cta"]["title"]) ?></a>
                             </div>
@@ -94,10 +101,10 @@ $text       = get_field('text');
                     <div class="w-full lg:w-[49%]">
                         <div class="w-full rounded-[20px] py-[70px] bg-blue z-[99]">
                             <figure class="flex justify-center">
-                                <img class="w-[215px] h-[445px]" src="<?php echo  $card["image"] ?>" alt="">
+                                <img class="w-[215px] h-[445px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
                             </figure>
                         </div>
-                        <div class="mt-[50px]">
+                        <div class="mt-[50px] flex flex-col">
                             <h2 class="text-[36px] leading-[44px]"><?php echo $card["title"] ?></h2>
                             <div class="w-full my-[30px] flex flex-row flex-wrap gap-[20px]">
                                 <?php foreach ($card["checks"]  as $check) : ?>
@@ -108,6 +115,14 @@ $text       = get_field('text');
                                 <?php endforeach ?>
                             </div>
                             <p class="text-[16px] text-[#475467] leading-normal"> <?php echo $card["text"] ?></p>
+                            <div class="text-[24px] font-[600] text-dark-blue mt-[30px]">
+                                <?php echo $card["price"] ?> <span class="text-[12px] font-[400] text-gray"> / month</span>
+                            </div>
+                            <div>
+                                <?php foreach ($card["warnings"] as $key => $warning) : ?>
+                                    <span class="text-[10px] text-[#21316a80]  block mt-[15px]"><?php echo $warning["text"] ?></span>
+                                <?php endforeach ?>
+                            </div>
                             <div class="w-fit mt-[30px]">
                                 <a href="<?php echo esc_url($card["cta"]["url"]) ?>" target="<?php echo esc_attr($card["cta"]["target"]) ?>" class="btn-blue"><?php echo esc_attr($card["cta"]["title"]) ?></a>
                             </div>

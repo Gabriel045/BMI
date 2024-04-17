@@ -10,6 +10,7 @@
                 <div class="w-full lg:w-[70%] xl:w-[60%] flex flex-wrap lg:flex-nowrap ">
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Have a Question?</span>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">Email us anytime</a>
                         <a target="_blank" href="mailto:hellow@bmimd.com" class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">hellow@bmimd.com</a>
                         <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">More questions?</a>
                         <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">Visit our FAQ Page</a>

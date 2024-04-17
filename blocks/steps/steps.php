@@ -53,7 +53,7 @@ $cards        = get_field('cards');
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="w-[31.4%] z-[99] bg-blue rounded-[10px] px-[20px] py-[30px]">
                     <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo sprintf('%02d', $key + 1); ?></span>
-                    <p class="mt-[20px] text-[16px] text-[gray] leading-[24px]"><?php echo $card["text"] ?></p>
+                    <div class="mt-[20px] text-[16px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
                 </div>
             <?php endforeach ?>
         </div>
@@ -61,14 +61,14 @@ $cards        = get_field('cards');
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="z-[99] bg-blue rounded-[10px] px-[20px] py-[30px]">
                     <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo sprintf('%02d', $key + 1); ?></span>
-                    <p class="mt-[20px] text-[16px] text-[gray] leading-[24px]"><?php echo $card["text"] ?></p>
+                    <div class="mt-[20px] text-[16px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
                 </div>
             <?php endforeach ?>
         </div>
         <div class="h-[1px] bg-blue w-[50%] lg:w-[70%] absolute bottom-[130px] right-[30px] lg:right-[112px] lg:hidden block"> </div>
         <div class="h-[1px] w-[100%] bg-[#E4E4E4] bottom-0 hidden lg:block"> </div>
         <img class="absolute right-0 lg:top-[22px] lg:bottom-auto bottom-[-190px] rotate-[205deg] lg:rotate-[15deg] " src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
-        <img class="absolute left-[-50px] bottom-[-45px] rotate-[20deg] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
+        <img class="absolute left-[-50px] bottom-[-15px] rotate-[-170deg] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
     </div>
 </section>
 

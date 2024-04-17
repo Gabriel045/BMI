@@ -38,26 +38,19 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 
-$number     = get_field('number_of_columns');
-$cards      = get_field('cards');
-$product    = get_field('product');
+$title        = get_field('title');
+$text         = get_field('text');
+$subtitle     = get_field('subtitle');
 ?>
 
-<section class="">
-    <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative">
-        <div class="px-[50px] flex flex-wrap gap-[2%] <?php echo $product ? 'bg-white ' : 'bg-blue  py-[75px]' ?>  rounded-[38px] gap-y-[50px] relative z-[99]">
-            <?php foreach ($cards as $key => $card) : ?>
-                <div class="w-full md:w-[48%] <?php echo $number == 4 ? 'lg:w-[23.5%]' : 'lg:w-[32%]' ?>">
-                    <figure class="flex justify-center">
-                        <img src="<?php echo $card["image"] ?>" alt="">
-                    </figure>
-                    <p class="text-[18px] text-dark-blue font-[600] my-[15px] text-center"><?php echo $card["title"] ?></p>
-                    <p class="text-[14px] text-gray text-center leading-[20px]"><?php echo $card["text"] ?></p>
-                </div>
-            <?php endforeach ?>
+<section class="bg-blue mt-[100px]">
+    <div class="block_content px-[30px] lg:px-[112px] py-[100px] h-[460px]" style="background-position: center; background-repeat: no-repeat; background-image:url(<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg.svg)">
+        <div class="flex justify-center h-full items-center">
+            <div class="lg:w-[40%]">
+                <h2 class="text-center"><?php echo $title ?></h2>
+                <p class="text-center text-[14px] leading-normal my-[35px] text-gray"><?php echo $text ?></p>
+                <h3 class="text-dark-blue text-center text-[24px] font-[600]"><?php echo $subtitle ?></h3>
+            </div>
         </div>
-        <?php if (!$product) { ?>
-            <img class="absolute left-0 bottom-[-80px] lg:top-[0px] scale-x-[-1] rotate-[-80deg] lg:rotate-[354deg] lg:row-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
-        <?php  } ?>
     </div>
 </section>

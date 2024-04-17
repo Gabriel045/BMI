@@ -29,7 +29,7 @@
           ));  ?>
 
         </div>
-        <div class="w-[40%] xl:w-[30%] flex  items-center justify-end lg:justify-normal gap-[10px]">
+        <div class="w-[40%] xl:w-[30%] flex  items-center justify-end gap-[10px]">
           <span class="inline-block lg:hidden cursor-pointer menu-mobile">
             <div class="" id="nav-icon4">
               <span></span>

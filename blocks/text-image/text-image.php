@@ -49,13 +49,13 @@ $cta            =  get_field('cta');
 <section id="text-image" class="<?php echo $background == "Blue" ? 'bg-blue' : 'bg-white' ?> ">
     <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative <?php echo $block['className'] ?>">
         <?php if ($background != "Dark Blue") : ?>
-            <div class="flex flex-wrap lg:flex-nowrap lg:flex-row  lg:gap-[100px] <?php echo $image_position == "Right" ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col flex-col lg:flex-row' ?>">
-                <div class="w-full lg:w-[45%] flex">
+            <div class="flex flex-wrap lg:flex-nowrap lg:flex-row  lg:gap-[50px] <?php echo $image_position == "Right" ? 'flex-col-reverse lg:flex-row-reverse' : 'flex-col flex-col lg:flex-row' ?>">
+                <div class="w-full lg:w-[50%] flex">
                     <figure class="w-full relative z-[99]">
-                        <img class="w-full rounded-[20px] object-cover h-[446px] lg:h-[584px]" src="<?php echo esc_url($image) ?>">
+                        <img class="w-full rounded-[20px] object-cover h-[446px] lg:h-full" src="<?php echo esc_url($image) ?>">
                     </figure>
                 </div>
-                <div class="w-full lg:w-[55%] flex flex-col justify-center mt-[50px] lg:mt-0">
+                <div class="w-full lg:w-[50%] flex flex-col justify-center mt-[50px] lg:mt-0">
                     <h2 class=""> <?php echo $title ?></h2>
                     <div class="mt-[30px] text-gray"><?php echo $text ?></div>
                     <?php if (!empty($cta["url"])) : ?>
@@ -64,8 +64,8 @@ $cta            =  get_field('cta');
                         </div>
                     <?php endif ?>
                 </div>
+                <img class="absolute left-0 top-[50%] rotate-[80deg] translate-y-[-50%] hidden lg:block" style="filter: brightness(0) saturate(100%) invert(98%) sepia(98%) saturate(7%) hue-rotate(155deg) brightness(102%) contrast(106%);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
             </div>
-            <img class="absolute left-0 top-[50%] rotate-[80deg] translate-y-[-50%] hidden lg:block" style="filter: brightness(0) saturate(100%) invert(98%) sepia(98%) saturate(7%) hue-rotate(155deg) brightness(102%) contrast(106%);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
 
         <?php else : ?>
             <div class="bg-dark-blue rounded-[31px] p-[30px] lg:p-[72px]  relative z-[99]">

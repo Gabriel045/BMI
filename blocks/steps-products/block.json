@@ -1,0 +1,22 @@
+{
+    "name": "acf/steps-products",
+    "title": "Steps Products",
+    "description": "A custom Steps Products for the home pages.",
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Steps Products"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "steps-products.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_my_acf_block": "/blocks/steps-products/screenshot.png"
+            }
+        }
+    }
+}
