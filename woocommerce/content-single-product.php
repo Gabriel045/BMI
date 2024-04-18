@@ -30,15 +30,15 @@ $price   = $product->get_regular_price();
             <div class="flex flex-wrap lg:flex-nowrap gap-[38px]">
                 <div class="w-full lg:w-[60%] flex flex-nowrap gap-[12px]">
                     <?php foreach ($gallery as $key => $value) : ?>
-                        <div class="w-[49%] bg-blue rounded-[21px] py-[50px] px-[40px] flex justify-center items-center">
-                            <figure class="w-[215px] lg:w-[214px] lg:h-[445px]">
+                        <div class="w-[49%] bg-blue rounded-[21px] py-[50px] px-[20px] md:px-[40px] flex justify-center items-center">
+                            <figure class="w-[215px] lg:w-[214px] h-full md:h-[445px]">
                                 <img class="object-cover w-full" style="height:100%" src="<?php echo wp_get_attachment_image_url($value, 'full')  ?>">
                             </figure>
                         </div>
                     <?php endforeach ?>
                 </div>
                 <div class="w-full lg:w-[40%]">
-                    <h2 class="text-center lg:text-start"><?php echo $title ?></h2>
+                    <h2 class="text-start"><?php echo $title ?></h2>
                     <div class="mt-[20px] flex gap-[10%] lg:gap-[15%]">
                         <figure>
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">
@@ -51,7 +51,7 @@ $price   = $product->get_regular_price();
                         <span class="flex text-[14px] lg:text-[16px]">
                             <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" alt="">
                             Includes Provider and Medication </span>
-                        <span class="mt-[30px] flex text-[14px] lg:text-[16px]">
+                        <span class="mt-[10px] flex text-[14px] lg:text-[16px]">
                             <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" alt="">
                             No hidden fees - no insurance needed 
                         </span>
@@ -72,7 +72,7 @@ $price   = $product->get_regular_price();
     <div class="content">
         <section class="">
             <div class="flex block_content px-[30px] lg:px-[112px] pb-[25px]">
-                <div class="hidden lg:flex w-[30%]  justify-center items-center">
+                <div class="hidden md:flex w-[30%]  justify-center items-center">
                     <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
                 </div>
                 <div class="flex flex-row justify-center items-center gap-[20px] lg:gap-[30px] w-full lg:w-[40%]">
@@ -85,7 +85,7 @@ $price   = $product->get_regular_price();
                     </figure>
                     <span class="text-[10px] lg:text-[14px] text-gray">690 Reviews</span>
                 </div>
-                <div class="hidden lg:flex w-[30%] justify-center items-center">
+                <div class="hidden md:flex w-[30%] justify-center items-center">
                     <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
                 </div>
             </div>

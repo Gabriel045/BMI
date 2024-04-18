@@ -544,6 +544,15 @@ p{
     }
 }
 
+#product-list{
+    &::after{
+        content: none;
+    }
+    &::before{
+        content: none;
+    }
+}
+
 @media screen and (max-width:1024px){
     h1{
         color: #21316A;

@@ -63,7 +63,7 @@ $subtitle     = get_field('subtitle');
             <img class="absolute right-[-120px] top-[100px] rotate-[-184deg] scale-x-[-1] scale-y-[-1] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
         </div>
         <div class="bg-blue rounded-[21px] p-[30px] lg:p-[48px] mt-[20px] relative">
-            <div class="flex flex-wrap lg:flex-nowrap gap-[80px] flex-col-reverse lg:flex-row">
+            <div class="flex flex-wrap md:flex-nowrap gap-[80px] flex-col-reverse lg:flex-row">
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] justify-center">
                     <h2>Commodo tincidunt consectetur nunc mauris ut sapien urna lorem mus suspen disse lacus.</h2>
                     <p class="text-gray">Fames sed quam sit metus volutpat. Cras dui quis consectetur est. Ut mauris iaculis id fermentum. Praesent pulvinar pharetra ornare vitae consectetur blandit. Pellentesque sed ornare neque in quis. Duis consectetur posuere pellentesque porttitor tortor. Tincidunt adipiscing facilisi suscipit nulla varius cursus a. Diam sed blandit tincidunt at nunc adipiscing tellus. Ultrices velit quam nec consectetur. Posuere massa vitae a enim amet quam proin sed. Ullamcorper turpis.</p>
