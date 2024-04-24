@@ -52,12 +52,12 @@ $text       = get_field('text');
             <div class="flex gap-[100px] flex-col flex-wrap ">
                 <?php foreach ($cards as $key => $card) : ?>
                     <div class="flex md:flex-nowrap flex-wrap  gap-[28px] w-full <?php echo ($key % 2 == 0) ? "flex-row" :  "flex-row-reverse"  ?>">
-                        <div class="w-full md:w-[40%] rounded-[20px] py-[70px] bg-blue z-[99]">
+                        <div class="w-full md:w-[40%] rounded-[20px] py-[30px] lg:py-[50px] bg-blue z-[99]">
                             <figure class="flex justify-center">
-                                <img class="w-[215px] h-[445px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
+                                <img class="lg:w-[215px] h-[300px] lg:h-[440px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
                             </figure>
                         </div>
-                        <div class="w-full md:w-[60%] rounded-[20px] px-[50px] py-[60px] bg-blue z-[99]">
+                        <div class="w-full md:w-[60%] rounded-[20px] px-[50px] py-[50px] bg-blue z-[99]">
                             <div class="flex xl:flex-nowrap flex-wrap">
                                 <div class="w-full xl:w-[60%] gap-[25px]">
                                     <h2><?php echo $card["title"] ?></h2>

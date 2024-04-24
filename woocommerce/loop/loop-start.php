@@ -21,7 +21,10 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-	
+
 <section>
 	<div class="block_content px-[30px] lg:px-[112px] pb-[50px] relative">
+		<div class="w-fit fixed bottom-[30px] right-[30px] z-[99999999] block lg:hidden">
+			<a class="btn-blue">Get started</a>
+		</div>
 		<ul id="product-list" class="flex flex-col gap-[100px] products columns-<?php echo esc_attr(wc_get_loop_prop('columns')); ?>">

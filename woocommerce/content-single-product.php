@@ -61,8 +61,8 @@ $price   = $product->get_regular_price();
                         <span class="text-[16px] text-gray flex items-center ml-[5px]"> per month</span>
                     </div>
                     <div class="mt-[30px]">
-                        <div class=" flex justify-center">
-                            <a href="#" class="btn-blue w-full">Get Started</a>
+                        <div class=" flex justify-start flex-col">
+                            <?php do_action('woocommerce_after_shop_loop_item'); ?>
                         </div>
                     </div>
                 </div>

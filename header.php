@@ -13,6 +13,15 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open();
   $cta = get_field('header', 'option')["cta"]; ?>
+    <section class="bg-dark-blue">
+      <div class="all-texts flex flex-row py-[15px]">
+        <ul>
+          <?php for ($i=0; $i <= 20; $i++) { ?>
+              <li>JOIN 60k+ MEMBERS IN REACHING THEIR WEIGHT LOSS GOALS. LIMITED TIME: $100 OFF YOUR FIRST MONTH STARTING DOSE </li>
+          <?php } ?>
+        </ul>
+      </div>
+    </section>
   <header class="overflow-x-clip relative flex justify-center">
     <section>
       <div class="block_content px-[30px] lg:px-[112px] py-[20px] flex flex-row z-[99]">
@@ -38,7 +47,7 @@
             </div>
           </span>
           <div class="hidden lg:block w-fit">
-            <a class="btn-white">Sign in</a>
+            <a href="/login/" class="btn-white">Sign in</a>
           </div>
           <div class="hidden lg:block w-fit">
             <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
@@ -54,7 +63,7 @@
           ));  ?>
           <div class="flex flex-col items-center gap-[30px]">
             <div class="w-full">
-              <a class="btn-white">Sign in</a>
+              <a href="/login/" class="btn-white">Sign in</a>
             </div>
             <div class="w-full">
               <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>

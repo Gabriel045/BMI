@@ -4,13 +4,13 @@ $title   	 	= $product->get_title();
 $price   		= $product->get_regular_price();
 $image   		= $product->get_image_id();
 $description 	= $product->get_short_description();
-$props 			= get_field("props",$product->get_id());
+$props 			= get_field("props", $product->get_id());
 ?>
 <li class="">
 	<div class="content flex md:flex-nowrap flex-wrap  gap-[28px] w-full flex-row">
 		<div class="w-full md:w-[40%] rounded-[20px] px-[70px] lg:px-[50px] xl:px-[130px] py-[50px] lg:py-[70px] bg-blue z-[99]">
-			<figure class="flex justify-center">
-				<img class="object-cover w-full" style="height:100%" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
+			<figure class="flex justify-center h-full">
+				<img class="object-cover w-full h-full" style="height:100%" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
 			</figure>
 		</div>
 		<div class="w-full md:w-[60%] rounded-[20px] px-[30px] lg:px-[50px] py-[60px] bg-blue z-[99]">

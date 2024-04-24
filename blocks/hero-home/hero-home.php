@@ -53,7 +53,7 @@ $image        = get_field('image');
                 <p class="text-gray my-[24px] relative z-[99]"><?php echo $text ?></p>
                 <div class="flex gap-[60px]">
                     <div class="flex flex-col gap-y-[17px]">
-                        <p class="text-dark-blue font-[600] leading-[20px] text-[20px] relative z-[99]">50K</p>
+                        <p class="text-dark-blue font-[600] leading-[20px] text-[20px] relative z-[99]">60K</p>
                         <span class="text-[12px] text-gray relative z-[99]">Customers Served</span>
                     </div>
                     <div class="flex flex-col gap-y-[17px]">

@@ -1,4 +1,4 @@
-<?php 
+<?php
 define('theme_version', time());
 function dd($data = '')
 {
@@ -15,7 +15,8 @@ function dd($data = '')
 // Adding theme styles and scripts
 add_action('wp_enqueue_scripts', 'af_add_theme_scripts');
 
-function af_add_theme_scripts() {
+function af_add_theme_scripts()
+{
 
     wp_enqueue_style(
         'theme-styles',
@@ -111,7 +112,6 @@ function bbloomer_separate_login_form()
 }
 
 
-
 //Enable Gutemberg block on products pages
 function wplook_activate_gutenberg_products($can_edit, $post_type)
 {
@@ -122,3 +122,23 @@ function wplook_activate_gutenberg_products($can_edit, $post_type)
     return $can_edit;
 }
 add_filter('use_block_editor_for_post_type', 'wplook_activate_gutenberg_products', 10, 2);
+
+// Change 'add to cart' text on single product page (only for category ID 17)
+add_filter('woocommerce_product_add_to_cart_text', 'product_cat_add_to_cart_button_text', 20, 1);
+function product_cat_add_to_cart_button_text($text)
+{
+    // Only for a specific product category archive pages
+    $text = __('Get Started', 'woocommerce');
+
+    return $text;
+}
+
+
+add_filter('woocommerce_order_button_text','my_custom_checkout_button_text', 20, 2);
+function my_custom_checkout_button_text()
+{
+     // Only for a specific product category archive pages
+    $text = __('Get Started', 'woocommerce');
+
+    return $text;
+}
