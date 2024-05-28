@@ -19,4 +19,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/numbers');
     register_block_type(__DIR__ . '/blocks/product-weight');
     register_block_type(__DIR__ . '/blocks/product-static');
+    register_block_type(__DIR__ . '/blocks/blog-content');
 }

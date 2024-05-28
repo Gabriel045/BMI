@@ -47,7 +47,7 @@ $subtitle     = get_field('subtitle');
     <div class="block_content px-[30px] lg:px-[112px] py-[100px] ">
         <div class="flex flex-col items-center justify-center">
             <h2 class="lg:w-[35%] text-center">Science Backed. Medically Approved.</h2>
-            <p class="text-center mt-[30px] text-gray">All of bmiMD’s programs use the most up-to-date medical knowledge to give you the best results possible. Meet our care team of board certified physicians licensed in your state!</p>
+            <p class="text-center mt-[30px] text-gray">All of bmiMD's programs are designed using the most up to date clinical research for optimal effectiveness in achieving your weight loss goals.</p>
         </div>
         <div class="bg-blue rounded-[21px] p-[30px] lg:p-[48px] mt-[100px] relative">
             <div class="flex flex-wrap lg:flex-nowrap gap-[80px]">
@@ -55,9 +55,8 @@ $subtitle     = get_field('subtitle');
                     <img class="rounded-[21px] h-[332px] w-full object-cover" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/953c1193f0f075d77de1f98a8ff82435 1.png" alt="">
                 </figure>
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] justify-center">
-                    <h2>What bmiMD Prescribes</h2>
-                    <p>Our goal is to provide access to the most effective medication to the people who need it the most. Based on your medical history that may include: </p>
-
+                    <h2>A weight loss program that actually works</h2>
+                    <p>Starting from your online consult to the delivery of your compounded GLP-1 medication, bmiMD provides simple access to transparent, safe and affordable weight loss solutions. </p>
                 </div>
             </div>
             <img class="absolute right-[-120px] top-[100px] rotate-[-184deg] scale-x-[-1] scale-y-[-1] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
@@ -65,9 +64,9 @@ $subtitle     = get_field('subtitle');
         <div class="bg-blue rounded-[21px] p-[30px] lg:p-[48px] mt-[20px] relative">
             <div class="flex flex-wrap md:flex-nowrap gap-[80px] flex-col-reverse lg:flex-row">
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] justify-center">
-                    <h2>Commodo tincidunt consectetur nunc mauris ut sapien urna lorem mus suspen disse lacus.</h2>
-                    <p class="text-gray">Fames sed quam sit metus volutpat. Cras dui quis consectetur est. Ut mauris iaculis id fermentum. Praesent pulvinar pharetra ornare vitae consectetur blandit. Pellentesque sed ornare neque in quis. Duis consectetur posuere pellentesque porttitor tortor. Tincidunt adipiscing facilisi suscipit nulla varius cursus a. Diam sed blandit tincidunt at nunc adipiscing tellus. Ultrices velit quam nec consectetur. Posuere massa vitae a enim amet quam proin sed. Ullamcorper turpis.</p>
-                    <p class="text-[#82879A]">Morbi purus tincidunt ornare nam. Purus pellentesque sit at lectus turpis.</p>
+                    <h2>What is compounded semaglutide?</h2>
+                    <p class="text-gray">Compounded tirzepatide refers to a personalized medication formulated within a state Board of Pharmacy or FDA-licensed compounding facility as per a prescription provided by a licensed healthcare professional. These compounded drugs are mandated to use solely ingredients from FDA-licensed sources and undergo rigorous testing for potency, sterility, and purity.</p>
+                    <p class="text-[#82879A] font-[600]">bmiMD collaborates exclusively with licensed sterile compounding pharmacies throughout the United States.</p>
                 </div>
                 <figure class="lg:w-[50%]">
                     <img class="rounded-[21px]" style="height:100%;" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/image 14.png" alt="">
@@ -78,8 +77,8 @@ $subtitle     = get_field('subtitle');
                     <img class="rounded-[21px]" style="height:100%;" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 19.svg" alt="">
                 </figure>
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] ">
-                    <h2>Commodo tincidunt consectetur nunc mauris ut sapien urna lorem mus suspen disse lacus.</h2>
-                    <p class="text-gray">Fames sed quam sit metus volutpat. Cras dui quis consectetur est. Ut mauris iaculis id fermentum. Praesent pulvinar pharetra ornare vitae.</p>
+                    <h2>bmiMD’s commitment to quality medication</h2>
+                    <p class="text-gray">We work with a registered and certified third-party lab to run quality control checks for every lot of compounded semaglutide prescribed for bmiMD patients. We test four key characteristics that are associated with quality and safety.</p>
                 </div>
             </div>
             <img class="absolute left-[-120px] bottom-[0px] rotate-[-184deg] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">

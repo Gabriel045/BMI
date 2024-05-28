@@ -68,10 +68,10 @@ $cta            =  get_field('cta');
             </div>
 
         <?php else : ?>
-            <div class="bg-dark-blue rounded-[31px] p-[30px] lg:p-[72px]  relative z-[99]">
+            <div class="bg-dark-blue rounded-[31px] px-[25px] lg:px-[30px] py-[30px] lg:p-[72px]  relative z-[99]">
                 <div class="flex flex-wrap lg:flex-nowrap gap-y-[50px]">
-                    <div class="w-full lg:w-[60%]">
-                        <h2 class="text-white"> <?php echo $title ?></h2>
+                    <div class="w-full lg:w-[60%] flex flex-col justify-center">
+                        <h2 class="text-white !text-[36px] !leading-[44px]"> <?php echo $title ?></h2>
                         <div class="my-[30px] text-[#ffffff66] text-[16px]"><?php echo $text ?></div>
                         <div class="w-fit">
                             <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-white arrow_white"><?php echo esc_attr($cta["title"]) ?></a>

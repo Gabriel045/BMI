@@ -57,7 +57,7 @@
 
       <!-- mobile -->
       <div id="menu-mobile" class="menu-mobile-container block lg:hidden">
-        <div class="flex flex-col justify-between px-[40px] pb-[70px] pt-[100px] h-[85vh]">
+        <div class="flex flex-col justify-between px-[40px] pb-[70px] pt-[50px] h-[85vh]">
           <?php echo  wp_nav_menu(array(
             'menu'   => 'Header menu',
           ));  ?>

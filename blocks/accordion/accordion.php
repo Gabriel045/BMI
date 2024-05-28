@@ -47,11 +47,7 @@ $faqs           = get_field('faqs');
 
 <section id="faq" style="overflow: visible;" class="<?php echo $background == "Blue"  ? 'bg-blue' : 'bg-white' ?>">
     <div class="block_content <?php echo $background == "Blue"  ? 'py-[100px]' : 'pb-[100px]' ?>  px-[30px] lg:px-[160px]">
-        <?php if (is_singular('product')) : ?>
-            <h2>What constitutes Compounded Semaglutide?</h2>
-            <p class="mt-[30px] text-gray">Compounded Semaglutide refers to a personalized medication formulated within a state Board of Pharmacy or FDA-licensed compounding facility as per a prescription provided by a licensed healthcare professional. These compounded drugs are mandated to use solely ingredients from FDA-licensed sources and undergo rigorous testing for potency, sterility, and purity. While legally permitted, compounded drugs do not undergo FDA pre-market approval as they are not produced in large quantities for general distribution; rather, they are tailored to individual orders from medical practitioners. Consequently, the dosage, method of administration, and effectiveness may vary from commercially available brand-name medications.</p>
-        <?php endif ?>
-        <div class="flex justify-between mt-[50px]">
+        <div class="flex justify-between <?php echo $background == "Blue"  ? 'lg:mt-[50px]' : '' ?>">
             <h2 class="text-dark-blue"> <?php echo $title ?></h2>
             <?php if (!empty($cta["url"])) : ?>
                 <div class="w-fit hidden lg:block">
@@ -72,7 +68,7 @@ $faqs           = get_field('faqs');
                 <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0  border-b-[1px] <?php echo $background == "Blue"  ? 'border-white ' : 'border-[#E4E4E4] ' ?> z-[99] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">
                     <h5 class="text-dark-blue  cursor-pointer w-[70%] lg:w-auto"><?php echo $item['title'] ?> </h5>
                     <div class="item-content">
-                        <p class="w-[70%] lg:w-[95%] text-gray text-[14px] lg:text-[16px] leading-[20px] lg:leading-normal pt-[24px]"> <?php echo $item["paragraph"] ?> </p>
+                        <div class="w-[80%] lg:w-[95%] text-gray pt-[24px]"> <?php echo $item["paragraph"] ?> </div>
                     </div>
                 </div>
             <?php endforeach ?>
@@ -81,11 +77,11 @@ $faqs           = get_field('faqs');
 </section>
 
 <script>
-    let slideFaqItems = document.querySelectorAll(".slider-faq")
-    slideFaqItems[0].classList.add("active")
+    //const slideFaqItems = document.querySelectorAll(".slider-faq")
+    document.querySelectorAll(".slider-faq")[0].classList.add("active")
 
     function slideFaq(slide, i) {
-        slideFaqItems.forEach((item) => {
+        document.querySelectorAll(".slider-faq").forEach((item) => {
             let active = (item === slide) ? item.classList.add("active") : item.classList.remove("active")
         });
     }

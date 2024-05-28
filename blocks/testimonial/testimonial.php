@@ -47,9 +47,9 @@ $cta          = get_field('cta');
     <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative">
         <div class="flex flex-wrap lg:flex-nowrap">
             <div class="w-full lg:w-[70%]">
-                <h2 class="text-dark-blue relative z-[99]"><?php echo $title ?></h2>
+                <h2 class="text-[#101828] relative z-[99]"><?php echo $title ?></h2>
             </div>
-            <div class="w-full lg:w-[30%]  mt-[30px] lg:mt-0">
+            <div class="w-full lg:w-[30%]  mt-[30px] lg:mt-0 flex lg:justify-end">
                 <div class="w-fit">
                     <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
                 </div>

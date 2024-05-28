@@ -20,6 +20,7 @@ defined('ABSPATH') || exit;
 
 global $product;
 $gallery = $product->get_gallery_image_ids();
+$image   = $product->get_image_id();
 $title   = $product->get_title();
 $price   = $product->get_regular_price();
 ?>
@@ -27,17 +28,15 @@ $price   = $product->get_regular_price();
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
     <section>
         <div class="block_content py-[100px] px-[30px] lg:px-[112px]">
-            <div class="flex flex-wrap lg:flex-nowrap gap-[38px]">
-                <div class="w-full lg:w-[60%] flex flex-nowrap gap-[12px]">
-                    <?php foreach ($gallery as $key => $value) : ?>
-                        <div class="w-[49%] bg-blue rounded-[21px] py-[50px] px-[20px] md:px-[40px] flex justify-center items-center">
-                            <figure class="w-[215px] lg:w-[214px] h-full md:h-[445px]">
-                                <img class="object-cover w-full" style="height:100%" src="<?php echo wp_get_attachment_image_url($value, 'full')  ?>">
-                            </figure>
-                        </div>
-                    <?php endforeach ?>
+            <div class="flex flex-wrap lg:flex-nowrap gap-[90px]">
+                <div class="w-full lg:w-[55%] flex flex-nowrap gap-[12px]">
+                    <div class="w-full bg-blue rounded-[21px] py-[50px] px-[20px] md:px-[40px] flex justify-center items-center">
+                        <figure class="w-[215px] lg:w-[214px] h-full md:h-[445px]">
+                            <img class="object-cover w-full !h-[354px] lg:!h-full" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
+                        </figure>
+                    </div>
                 </div>
-                <div class="w-full lg:w-[40%]">
+                <div class="w-full lg:w-[45%] flex flex-col justify-center">
                     <h2 class="text-start"><?php echo $title ?></h2>
                     <div class="mt-[20px] flex gap-[10%] lg:gap-[15%]">
                         <figure>
@@ -49,10 +48,10 @@ $price   = $product->get_regular_price();
                     <span class="mt-[20px] text-[12px] lg:text-[14px] text-gray flex">The same active ingredient in Wegovy®* and Ozempic®* for only $xxx per Month</span>
                     <div class="mt-[50px]">
                         <span class="flex text-[14px] lg:text-[16px]">
-                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" alt="">
+                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(3719%) hue-rotate(197deg) brightness(98%) contrast(97%);" alt="">
                             Includes Provider and Medication </span>
                         <span class="mt-[10px] flex text-[14px] lg:text-[16px]">
-                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" alt="">
+                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(3719%) hue-rotate(197deg) brightness(98%) contrast(97%);" alt="">
                             No hidden fees - no insurance needed 
                         </span>
                     </div>
@@ -64,6 +63,12 @@ $price   = $product->get_regular_price();
                         <div class=" flex justify-start flex-col">
                             <?php do_action('woocommerce_after_shop_loop_item'); ?>
                         </div>
+                        <div class="mt-[30px]">
+                            <a class=" text-dark-blue w-[80%] text-[20px] font-[500] flex items-center flex-col py-[15px] px-[30px] border-[1px] border-dark-blue rounded-[70px]">
+                                3 Months Plan
+                                <span class="text-[12px] font-[400] block">Choose 3 Month Supply and save upto 20%</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,7 +76,7 @@ $price   = $product->get_regular_price();
     </section>
     <div class="content">
         <section class="">
-            <div class="flex block_content px-[30px] lg:px-[112px] pb-[25px]">
+            <div class="flex block_content px-[30px] lg:px-[112px] pb-[100px]">
                 <div class="hidden md:flex w-[30%]  justify-center items-center">
                     <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
                 </div>

@@ -50,17 +50,17 @@ $image        = get_field('image');
         <div class="flex gap-[20px]">
             <div class="w-full lg:w-[50%] flex flex-col justify-center">
                 <h1 class="relative z-[99]"><?php echo $title ?></h1>
-                <p class="text-gray my-[24px] relative z-[99]"><?php echo $text ?></p>
+                <div class="text-gray my-[24px] relative z-[99]"><?php echo $text ?></div>
                 <div class="flex gap-[60px]">
-                    <div class="flex flex-col gap-y-[17px]">
-                        <p class="text-dark-blue font-[600] leading-[20px] text-[20px] relative z-[99]">60K</p>
+                    <div class="flex flex-col gap-y-[17px] w-[40%] lg:w-auto">
+                        <p class="text-dark-blue font-[600] leading-[20px] text-[20px] relative z-[99]">60K +</p>
                         <span class="text-[12px] text-gray relative z-[99]">Customers Served</span>
                     </div>
-                    <div class="flex flex-col gap-y-[17px]">
+                    <div class="flex flex-col gap-y-[17px] w-[60%] lg:w-auto">
                         <figure>
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">
                         </figure>
-                        <span class="text-[12px] text-gray">4.9 Avg. Rating</span>
+                        <span class="text-[12px] text-gray">4.9 Avg Rating | 700+ Google Reviews</span>
                     </div>
                 </div>
                 <div class="mt-[50px] flex gap-[10px]">

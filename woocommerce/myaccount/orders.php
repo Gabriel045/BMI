@@ -20,7 +20,8 @@
 
 defined('ABSPATH') || exit;
 
-do_action('woocommerce_before_account_orders', $has_orders); ?>
+do_action('woocommerce_before_account_orders', $has_orders);
+?>
 
 <h1 class="text-[48px] mt-[30px]">My Account</h1>
 <p class="text-[#82879A] text-[16px] mb-[50px]">
@@ -28,7 +29,7 @@ do_action('woocommerce_before_account_orders', $has_orders); ?>
 	printf(
 		/* translators: 1: user display name 2: logout url */
 		wp_kses(__('Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce'), $allowed_html),
-		'<strong class="text-dark-blue">' . esc_html(wp_get_current_user()->user_login) . '</strong>',
+		'<strong class="text-dark-blue">' . esc_html(wp_get_current_user()-> display_name) . '</strong>',
 		esc_url(wc_logout_url())
 	);
 	?>

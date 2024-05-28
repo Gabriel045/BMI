@@ -43,25 +43,25 @@ $text         = get_field('text');
 $cards        = get_field('cards');
 ?>
 
-<section class="">
+<section id="steps" class="">
     <div class="block_content px-[30px] lg:px-[112px] pt-[100px] pb-[100px] lg:pb-0 relative">
-        <div class="lg:w-[70%]">
-            <h2><?php echo $title ?></h2>
+        <div class="lg:w-[64%]">
+            <h2 class="text-[#101828]"><?php echo $title ?></h2>
             <p class="mt-[20px] text-gray"> <?php echo $text ?></p>
         </div>
         <div class="hidden lg:flex gap-[23px] flex-row flex-wrap mt-[50px] mb-[100px]">
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="w-[31.4%] z-[99] bg-blue rounded-[10px] px-[20px] py-[30px]">
-                    <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo sprintf('%02d', $key + 1); ?></span>
-                    <div class="mt-[20px] text-[16px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
+                    <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo $key + 1; ?></span>
+                    <div class="mt-[20px] lg:text-[18px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
                 </div>
             <?php endforeach ?>
         </div>
-        <div id="multiple-steps" class="pb-[50px] mb-[50px] mt-[50px] lg:hidden block">
+        <div id="multiple-steps" class="pb-[50px] mb-[50px] mt-[50px] lg:!hidden !block">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="z-[99] bg-blue rounded-[10px] px-[20px] py-[30px]">
-                    <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo sprintf('%02d', $key + 1); ?></span>
-                    <div class="mt-[20px] text-[16px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
+                <div class="z-[99] bg-blue rounded-[10px] px-[20px] py-[30px] !h-[340px]">
+                    <span class="flex w-fit text-[16px] text-white bg-dark-blue py-[10px] px-[30px] rounded-[30px]">Step <?php echo $key + 1; ?></span>
+                    <div class="mt-[20px] lg:text-[18px] text-gray leading-[24px]"><?php echo $card["text"] ?></div>
                 </div>
             <?php endforeach ?>
         </div>

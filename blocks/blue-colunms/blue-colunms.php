@@ -41,11 +41,12 @@ if (!empty($block['align'])) {
 $number     = get_field('number_of_columns');
 $cards      = get_field('cards');
 $product    = get_field('product');
+$text       = get_field('text');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative">
-        <div class="px-[50px] flex flex-wrap gap-[2%] <?php echo $product ? 'bg-white ' : 'bg-blue  py-[75px]' ?>  rounded-[38px] gap-y-[50px] relative z-[99]">
+    <div class="block_content px-[30px] lg:px-[112px] pb-[100px] relative flex flex-col-reverse lg:flex-col ">
+        <div class="px-[30px] lg:px-[50px] flex flex-wrap gap-[2%] <?php echo $product ? 'bg-white ' : 'bg-blue  py-[75px]' ?>  rounded-[38px] gap-y-[50px] relative z-[99]">
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="w-full md:w-[48%] <?php echo $number == 4 ? 'lg:w-[23.5%]' : 'lg:w-[32%]' ?>">
                     <figure class="flex justify-center">
@@ -59,5 +60,8 @@ $product    = get_field('product');
         <?php if (!$product) { ?>
             <img class="absolute left-0 bottom-[-80px] lg:top-[0px] scale-x-[-1] rotate-[-80deg] lg:rotate-[354deg] lg:row-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
         <?php  } ?>
+        <p class="mt-[30px] mb-[50px] lg:mb-0 lg:mt-[50px] text-[#475467]">
+            <?php echo $text ?>
+        </p>
     </div>
 </section>

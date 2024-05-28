@@ -21,17 +21,18 @@ if (!defined('ABSPATH')) {
 }
 ?>
 </ul>
-<img class="absolute right-[50%] top-[650px] xl:top-[480px] rotate-[100deg] scale-x-[-1]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
 <img class="absolute left-[-50px] bottom-[100px] rotate-[-170deg] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
 </div>
 </section>
 
 <script>
 	const parent = document.querySelector("main")
-	const child = document.querySelector("#faq")
-	parent.appendChild(child)
+	const faq = document.querySelector("#faq")
+	const steps = document.querySelector("#steps")
+	parent.appendChild(steps)
+	parent.appendChild(faq)
+	const list = document.querySelectorAll("#product-list .product-item")
 
-	const list = document.querySelectorAll("#product-list li")
 	list.forEach((element, index) => {
 		if (index % 2) {
 			element.querySelector(".content").classList.add("flex-row-reverse")

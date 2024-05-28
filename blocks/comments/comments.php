@@ -54,7 +54,7 @@ $cards        = get_field('cards');
                             </figure>
                             <div class="flex items-center">
                                 <p class="text-[12px] lg:text-[18px] font-[600] text-dark-blue"><?php echo $card["name"] ?></p>
-                                <span class="text-[10px] lg:text-[14px] text-gray ml-[20px]"><?php echo $card["weight"] ?></span>
+                                <span class="text-[10px] lg:text-[13px] text-gray ml-[20px]"><?php echo $card["weight"] ?></span>
                             </div>
                             <figure class="m-auto">
                                 <img class="lg:w-auto w-[80px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">

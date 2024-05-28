@@ -43,8 +43,10 @@ $text         = get_field('text');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[112px] py-[100px]">
-    <h1><?php echo $title ?></h1>
-    <p class="mt-[24px] text-gray"><?php echo $text ?></p>
+    <div class="block_content px-[30px] lg:px-[112px] py-[100px] <?php echo $block['className'] ?>">
+        <h1><?php echo $title ?></h1>
+        <?php if ($text) : ?>
+            <p class="mt-[24px] text-gray"><?php echo $text ?></p>
+        <?php endif ?>
     </div>
 </section>

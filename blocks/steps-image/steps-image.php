@@ -47,19 +47,19 @@ $cards        = get_field('cards');
         <div class="hidden lg:flex flex-row gap-[2%] gap-y-[100px]">
             <div class="w-[48%] flex flex-wrap flex-col justify-between ">
                 <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
-                    <h2 class="text-center">Let’s get to know you</h2>
+                    <h2 class="">Let’s get to know you</h2>
                     <p class="my-[30px] text-gray text-[16px] leading-normal">First, share your health history and weight loss goals with your bmiMD affiliated provider through our confidential online questionnaire.</p>
                     <div class="">
-                        <span class="flex text-gray text-[16px]">
-                            <img class="mr-[15px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (1).svg">
+                        <span class="flex text-gray text-[16px] items-center">
+                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (1).svg">
                             Clinically proven to help lose weight
                         </span>
-                        <span class="flex text-gray text-[16px] my-[25px]">
-                            <img class="mr-[15px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (2).svg">
+                        <span class="flex text-gray text-[16px] items-center my-[25px]">
+                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (2).svg">
                             Optimize results with metabolic testing
                         </span>
-                        <span class="flex text-gray text-[16px]">
-                            <img class="mr-[15px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 212.svg">
+                        <span class="flex text-gray text-[16px] items-center">
+                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 212.svg">
                             Curbs hunger to keep you feeling fuller
                         </span>
                     </div>
@@ -78,7 +78,17 @@ $cards        = get_field('cards');
                     <span class="text-[13px] text-gray text-center">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</span>
                     <span class="text-[13px] text-gray text-center mt-[30px]">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. </span>
                 </div>
-                <img class="absolute top-[300px] left-[-160px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group_12.png">
+                <div class="absolute top-[300px] left-[-160px]">
+                    <svg class="svg-item-bg" width="919" height="1194" viewBox="0 0 919 1194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M109.885 337.175C298.07 279.321 196.349 32.0093 323.501 6.57882" stroke="#E4EAFF" stroke-width="12" />
+                        <path d="M5.80078 461.012C406.177 1059.66 665.819 513.485 913 928.892" stroke="#E4EAFF" stroke-width="12" />
+                    </svg>
+
+                    <svg class="svg-item-animated" width="919" height="1194" viewBox="0 0 919 1194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="reverse" d="M109.885 337.175C298.07 279.321 196.349 32.0093 323.501 6.57882" stroke="#E4EAFF" stroke-width="12" />
+                        <path d="M5.80078 461.012C406.177 1059.66 665.819 513.485 913 928.892" stroke="#E4EAFF" stroke-width="12" />
+                    </svg>
+                </div>
 
             </div>
             <div class="w-[50%] pl-[30px] flex flex-col dashed gap-y-[100px] relative">
@@ -86,9 +96,9 @@ $cards        = get_field('cards');
                     <div class="dot relative">
                         <span class="flex w-fit text-[16px] lg:text-[20px] text-gray bg-blue py-[8px] px-[30px] rounded-[30px] mt-[60px] lg:mt-0">Step <?php echo $key + 1 ?></span>
                         <h2 class="my-[30px]"><?php echo $card["title"] ?></h2>
-                        <p class="text-gray text-[16px] leading-normal"> <?php echo  $card["text"] ?></p>
+                        <p class="text-gray text-[16px] leading-normal relative z-[99]"> <?php echo  $card["text"] ?></p>
                         <figure class="mt-[20px]">
-                            <img class="rounded-[21px] h-[400px] w-full object-cover" src="<?php echo $card["image"] ?>">
+                            <img class="rounded-[21px] h-[400px] w-full object-cover relative z-[99]" src="<?php echo $card["image"] ?>">
                         </figure>
                     </div>
                 <?php endforeach ?>
@@ -96,10 +106,10 @@ $cards        = get_field('cards');
         </div>
         <!-- Mobile -->
         <div class="lg:hidden flex flex-col gap-y-[100px]">
-            <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
-                <h2 class="text-center">Let’s get to know you</h2>
-                <p class="my-[30px] text-gray text-[16px] leading-normal ">First, share your health history and weight loss goals with your bmiMD affiliated provider through our confidential online questionnaire.</p>
-                <div class="">
+            <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[30px] lg:px-[48px] flex flex-col">
+                <h2 class="">Let’s get to know you</h2>
+                <p class="my-[30px] text-gray text-[16px] leading-normal relative z-[99] ">First, share your health history and weight loss goals with your bmiMD affiliated provider through our confidential online questionnaire.</p>
+                <div class="hidden lg:block">
                     <span class="flex text-gray text-[16px]">
                         <img class="mr-[15px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (1).svg">
                         Clinically proven to help lose weight
@@ -110,7 +120,7 @@ $cards        = get_field('cards');
                     </span>
                     <span class="flex text-gray text-[16px]">
                         <img class="mr-[15px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 212.svg">
-                        Curbs hunger to keep you feeling fuller 
+                        Curbs hunger to keep you feeling fuller
                     </span>
                 </div>
             </div>
@@ -126,7 +136,7 @@ $cards        = get_field('cards');
                     </div>
                 <?php endforeach ?>
             </div>
-            <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
+            <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[30px] lg:px-[48px] flex flex-col">
                 <p class="text-[14px] text-dark-blue">Lorem Ipsum</p>
                 <h2 class="my-[30px]"> Lorem ipsum dolor sit amet consectetur.</h2>
                 <ul class="list-disc text-[14px] text-gray pl-[20px]">

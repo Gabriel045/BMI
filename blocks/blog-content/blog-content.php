@@ -31,28 +31,17 @@ if (!empty($block['anchor'])) {
 $class_name = 'hero-block';
 if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
-}
-if (!empty($block['align'])) {
-    $class_name .= ' align' . $block['align'];
+}else{
+    $block['className']= "";
 }
 
 // Load values and assign defaults.
-$cards       = get_field('cards');
-$text        = get_field('text');
+
+$text         = get_field('text');
 ?>
 
-<section class="">
-    <div class="block_content px-[30px] lg:px-[112px] ">
-        <div class="lg:my-[100px] text-[#475467]">
-            <?php echo $text ?>
-        </div>
-        <div class="flex flex-wrap lg:flex-nowrap justify-between gap-y-[50px] mt-[100px] lg:mt-0">
-            <?php foreach ($cards as $key => $card) : ?>
-                <div class="w-full lg:w-auto flex flex-col lg:gap-y-[20px]">
-                    <h2 class="text-center !text-[36px]"><?php echo $card["numbers"] ?></h2>
-                    <p class="text-[16px] text-gray text-center leading-normal"><?php echo $card["text"] ?></p>
-                </div>
-            <?php endforeach ?>
-        </div>
+<section id="blog-content">
+    <div class="block_content px-[30px] lg:px-[112px] pt-[100px] <?php echo $block['className'] ?>">
+        <?php echo $text ?>
     </div>
 </section>

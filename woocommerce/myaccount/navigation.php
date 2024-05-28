@@ -26,11 +26,15 @@ do_action('woocommerce_before_account_navigation');
 
 <nav class="woocommerce-MyAccount-navigation h-auto">
 	<ul class="bg-[#F5F8FF] rounded-[10px] px-[16px] py-[32px] w-[250px] flex flex-col gap-y-[20px] h-full">
-		<?php foreach (wc_get_account_menu_items() as $endpoint => $label) : ?>
-			<li class="py-[8px] px-[12px] text-[16px] font-[600] bg-[#E4EAFF] rounded-[8px] flex gap-[12px] <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
-				<a href="<?php echo esc_url(wc_get_account_endpoint_url($endpoint)); ?>"><?php echo esc_html($label); ?></a>
-			</li>
-		<?php endforeach; ?>
+		<?php foreach (wc_get_account_menu_items() as $endpoint => $label) :
+			if ($label != "Downloads") : ?>
+				<li class="py-[8px] px-[12px] text-[16px] font-[600] bg-[#E4EAFF] rounded-[8px] flex gap-[12px] <?php echo wc_get_account_menu_item_classes($endpoint); ?>">
+					<a href="<?php echo esc_url(wc_get_account_endpoint_url($endpoint)); ?>"><?php echo esc_html($label); ?></a>
+				</li>
+
+		<?php
+			endif;
+		endforeach; ?>
 	</ul>
 </nav>
 

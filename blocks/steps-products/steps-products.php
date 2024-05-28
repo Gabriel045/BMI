@@ -60,8 +60,8 @@ $cta        = get_field('cta');
                         </fugure>
                     </div>
                     <div class="w-full lg:w-[65%]  bg-blue px-[30px] lg:px-[60px] py-[50px] lg:py-[70px] rounded-[21px]">
-                        <span class="text-[20px] text-gray mb-[30px] block">Step <?php echo sprintf('%02d', $key + 1); ?></span>
-                        <div class="text-gray"><?php echo $card["text"] ?></div>
+                        <span class="text-[20px] text-[#82879A] mb-[30px] block">Step <?php echo sprintf('%02d', $key + 1); ?></span>
+                        <div class="text-[#82879A]"><?php echo $card["text"] ?></div>
                     </div>
                 </div>
             <?php endforeach ?>

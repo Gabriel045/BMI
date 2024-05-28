@@ -10,28 +10,29 @@
                 <div class="w-full lg:w-[70%] xl:w-[60%] flex flex-wrap lg:flex-nowrap ">
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Have a Question?</span>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">Email us anytime</a>
-                        <a target="_blank" href="mailto:hellow@bmimd.com" class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">orders@bmiMD.com</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">More questions?</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">Visit our FAQ Page</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">Email us anytime</a>
+                        <a target="_blank" href="mailto:hellow@bmimd.com" class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">orders@bmiMD.com</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">More questions?</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">Visit our FAQ Page</a>
                     </div>
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Hours & Support</span>
-                        <span class="text-[16px] text-center lg:text-start  font-[600] text-dark-blue">Monday-Thursday</span>
-                        <span class="text-[16px] text-center lg:text-start  font-[600] text-dark-blue">10am-5pm</span>
-                        <span class="text-[16px] text-center lg:text-start  font-[600] text-dark-blue">Friday 10am-1pm</span>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">How it works?</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">FAQ</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-dark-blue">Get Started</a>
-
-
+                        <div class="pl-[30px] border-l-[3px] border-[#21316A] relative w-fit m-auto lg:m-[unset]">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/case.svg" class="absolute left-[10px] top-[8px]">
+                            <span class="block text-[16px] text-center lg:text-start  font-[400] text-[#475467]">Monday-Thursday</span>
+                            <span class="block text-[16px] text-center lg:text-start  font-[400] text-[#475467]">10am-5pm</span>
+                            <span class="block mt-[15px] text-[16px] text-center lg:text-start  font-[400] text-[#475467]">Friday 10am-1pm</span>
+                        </div>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">How it works?</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">FAQ</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">Get Started</a>
                     </div>
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Safety Disclaimer</span>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-dark-blue font-[600]">Terms of use</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-dark-blue font-[600]">Disclaimers</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-dark-blue font-[600]">Privacy</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-dark-blue font-[600]">Return & Refund Policy</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-[#475467] font-[600]">Terms of use</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-[#475467] font-[600]">Disclaimers</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-[#475467] font-[600]">Privacy</a>
+                        <a class="text-[16px] text-center lg:text-start cursor-pointer text-[#475467] font-[600]">Return & Refund Policy</a>
                     </div>
                 </div>
             </div>

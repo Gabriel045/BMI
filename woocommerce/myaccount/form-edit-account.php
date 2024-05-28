@@ -27,7 +27,7 @@ do_action('woocommerce_before_edit_account_form'); ?>
 	printf(
 		/* translators: 1: user display name 2: logout url */
 		wp_kses(__('Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce'), $allowed_html),
-		'<strong class="text-dark-blue">' . esc_html(wp_get_current_user()->user_login) . '</strong>',
+		'<strong class="text-dark-blue">' . esc_html(wp_get_current_user()-> display_name) . '</strong>',
 		esc_url(wc_logout_url())
 	);
 	?>
