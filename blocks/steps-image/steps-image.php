@@ -73,7 +73,7 @@ $cards        = get_field('cards');
                         <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
                     </ul>
                     <div class="w-full my-[30px]">
-                        <a href="" class="btn-blue">Get Started</a>
+                        <a href="/shop/" class="btn-blue">Get Started</a>
                     </div>
                     <span class="text-[13px] text-gray text-center">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</span>
                     <span class="text-[13px] text-gray text-center mt-[30px]">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. </span>
@@ -145,7 +145,7 @@ $cards        = get_field('cards');
                     <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
                 </ul>
                 <div class="w-full my-[30px]">
-                    <a href="" class="btn-blue">Get Started</a>
+                    <a href="/shop/" class="btn-blue">Get Started</a>
                 </div>
                 <span class="text-[10px] text-gray text-center">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</span>
                 <span class="text-[14px] text-gray text-center mt-[30px]">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. </span>

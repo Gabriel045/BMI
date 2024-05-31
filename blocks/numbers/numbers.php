@@ -42,15 +42,15 @@ $text        = get_field('text');
 ?>
 
 <section class="">
-    <div class="block_content px-[30px] lg:px-[112px] ">
-        <div class="lg:my-[100px] text-[#475467]">
+    <div class="block_content px-[30px] lg:px-[112px] pb-[10px]">
+        <div class=" text-[#475467]">
             <?php echo $text ?>
         </div>
-        <div class="flex flex-wrap lg:flex-nowrap justify-between gap-y-[50px] mt-[100px] lg:mt-0">
+        <div class="flex flex-wrap lg:flex-nowrap justify-between  gap-y-[20px] gap-[2%] mt-[100px]">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="w-full lg:w-auto flex flex-col lg:gap-y-[20px]">
-                    <h2 class="text-center !text-[36px]"><?php echo $card["numbers"] ?></h2>
-                    <p class="text-[16px] text-gray text-center leading-normal"><?php echo $card["text"] ?></p>
+                <div class="colors w-[48%] lg:w-auto flex flex-col justify-around gap-y-[10px] rounded-[20px] px-[20px] lg:px-[50px] py-[20px] first:bg-[#73DC78] last:bg-[#DC7399]">
+                    <h2 class="text-center !text-[36px] leading-[30px] text-white"><?php echo $card["numbers"] ?></h2>
+                    <p class="text-[16px] text-dark-blue text-center leading-[16px]"><?php echo $card["text"] ?></p>
                 </div>
             <?php endforeach ?>
         </div>

@@ -46,7 +46,7 @@ $cta        = get_field('cta');
 
 <section class="">
 
-    <div class="block_content px-[30px] lg:px-[112px] pt-[100px] pb-0 relative border-t-[1px] border-[#D4D4D4]">
+    <div class="block_content px-[30px] lg:px-[112px] relative">
         <div class="flex flex-col items-center">
             <h2 class="text-center lg:text-start"><?php echo $title ?></h2>
             <p class="mt-[20px] text-gray "> <?php echo $text ?></p>
@@ -59,7 +59,7 @@ $cta        = get_field('cta');
                             <img src="<?php echo $card["image"] ?>">
                         </fugure>
                     </div>
-                    <div class="w-full lg:w-[65%]  bg-blue px-[30px] lg:px-[60px] py-[50px] lg:py-[70px] rounded-[21px]">
+                    <div class="w-full lg:w-[65%]  bg-blue px-[30px] lg:px-[60px] py-[50px] lg:py-[70px] rounded-[21px] z-[99]">
                         <span class="text-[20px] text-[#82879A] mb-[30px] block">Step <?php echo sprintf('%02d', $key + 1); ?></span>
                         <div class="text-[#82879A]"><?php echo $card["text"] ?></div>
                     </div>

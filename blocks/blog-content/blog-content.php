@@ -41,7 +41,7 @@ $text         = get_field('text');
 ?>
 
 <section id="blog-content">
-    <div class="block_content px-[30px] lg:px-[112px] pt-[100px] <?php echo $block['className'] ?>">
+    <div class="block_content px-[30px] lg:px-[160px] pt-[100px] <?php echo $block['className'] ?>">
         <?php echo $text ?>
     </div>
 </section>

@@ -65,8 +65,8 @@ $faqs           = get_field('faqs');
         <?php endif ?>
         <div class="mt-[50px] <?php echo $background == "Blue"  ? 'lg:mt-[112px]' : 'lg:mt-[50px]' ?> ">
             <?php foreach ($faqs as $key => $item) : ?>
-                <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0  border-b-[1px] <?php echo $background == "Blue"  ? 'border-white ' : 'border-[#E4E4E4] ' ?> z-[99] relative  inactive " onclick="slideFaq(this, <?php echo $key ?>)">
-                    <h5 class="text-dark-blue  cursor-pointer w-[70%] lg:w-auto"><?php echo $item['title'] ?> </h5>
+                <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0  border-b-[1px] <?php echo $background == "Blue"  ? 'border-white ' : 'border-[#E4E4E4] ' ?> z-[99] relative  inactive ">
+                    <h5 class="title text-dark-blue  cursor-pointer w-[70%] lg:w-auto"><?php echo $item['title'] ?> </h5>
                     <div class="item-content">
                         <div class="w-[80%] lg:w-[95%] text-gray pt-[24px]"> <?php echo $item["paragraph"] ?> </div>
                     </div>
@@ -77,12 +77,17 @@ $faqs           = get_field('faqs');
 </section>
 
 <script>
-    //const slideFaqItems = document.querySelectorAll(".slider-faq")
-    document.querySelectorAll(".slider-faq")[0].classList.add("active")
+    const faqs = document.querySelectorAll(".slider-faq")
+    faqs.forEach(item => {
+        item.querySelector(".title").addEventListener("click", () => {
+            //close the other tabs
+            faqs.forEach(element => {
+                if (item != element)
+                    element.classList.contains("active") ? element.classList.remove("active") : ''
+            });
 
-    function slideFaq(slide, i) {
-        document.querySelectorAll(".slider-faq").forEach((item) => {
-            let active = (item === slide) ? item.classList.add("active") : item.classList.remove("active")
-        });
-    }
+            item.classList.toggle("active")
+
+        })
+    });
 </script>

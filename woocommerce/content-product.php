@@ -4,14 +4,14 @@ $title   	 	= $product->get_title();
 $price   		= $product->get_regular_price();
 $image   		= $product->get_image_id();
 $description 	= $product->get_short_description();
-$props 			= get_field("props", $product->get_id());
+$checks 	    = get_field("checks", $product->get_id());
 $includes       = get_field("includes", $product->get_id());
 ?>
 <li class="product-item">
 	<div class="content flex md:flex-nowrap flex-wrap  gap-[28px] w-full flex-row">
 		<div class="w-full md:w-[40%] rounded-[20px] bg-blue z-[99]">
 			<figure class="flex justify-center items-center h-full">
-				<img class="object-cover w-full !h-auto" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
+				<img class="object-cover !h-[354px] lg:!h-[480px] w-auto" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
 			</figure>
 		</div>
 		<div class="w-full md:w-[60%] rounded-[20px] px-[30px] lg:px-[50px] py-[60px] bg-blue z-[99]">
@@ -20,7 +20,7 @@ $includes       = get_field("includes", $product->get_id());
 					<h2><?php echo $title ?></h2>
 				</div>
 				<div class="w-full xl:w-[30%] xl:mt-0 flex flex-col gap-y-[17px] lg:items-end mb-[30px] lg:mb-0">
-					<?php foreach ($props  as $check) :
+					<?php foreach ($checks  as $check) :
 						if ($check["text"] != "NEW") : ?>
 							<span class="w-fit flex text-[12px] leading-[20px] text-[#2B9606] px-[10px] py-[6px] bg-white rounded-[34px]">
 								<?php echo $check["text"] ?>

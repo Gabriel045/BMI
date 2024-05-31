@@ -25,7 +25,7 @@
                         </div>
                         <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">How it works?</a>
                         <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">FAQ</a>
-                        <a class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">Get Started</a>
+                        <a href="/shop/" class="text-[16px] text-center lg:text-start cursor-pointer font-[600] text-[#475467]">Get Started</a>
                     </div>
                     <div class="w-full lg:w-1/3 mt-[50px] lg:mt-0 flex flex-col gap-y-[16px]">
                         <span class="text-[16px] text-center lg:text-start  text-[#667085] font-[600]">Safety Disclaimer</span>

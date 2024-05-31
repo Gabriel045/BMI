@@ -31,7 +31,10 @@ if (!empty($block['anchor'])) {
 $class_name = 'hero-block';
 if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
+}else{
+    $block['className'] = "";
 }
+
 if (!empty($block['align'])) {
     $class_name .= ' align' . $block['align'];
 }

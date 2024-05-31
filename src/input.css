@@ -40,7 +40,7 @@ body{
 section {
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    overflow-x: clip;
     /*position: relative;
     z-index: 1;*/
     width: 100%;
@@ -155,15 +155,23 @@ p{
     border-radius: 5px;
     box-shadow: -4px 3px 12.4px 0px rgba(0, 0, 0, 0.15);
     left: 0;
-    width: max-content;
+    width: 230px;
     opacity: 0;
-    padding: 20px;
+    padding: 30px 25px; 
     position: absolute;
     top: 70%;
     transform: translateY(8px);
     visibility: hidden;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     transition: all .3s ease;
+
+    li a{
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 #menu-header-menu>.menu-item-has-children {
@@ -302,7 +310,16 @@ p{
 }
 
 .menu-mobile-container #menu-header-menu-1 .menu-item-has-children>.sub-menu {
-    padding-left: 50px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%;
+
+    li a{
+        font-size: 18px;
+        font-weight: 400;
+    }
 }
 
 .menu-mobile-container #menu-header-menu-1 .sub-menu {
@@ -318,7 +335,7 @@ p{
 }
 
 .menu-mobile-container #menu-header-menu-1 .sub-menu.show {
-    margin-top: 10px;
+    margin-top: 20px;
     opacity: 1;
     height: auto;
     visibility: visible;
@@ -515,15 +532,17 @@ p{
 .slider-faq {
 
     &.inactive .item-content {
-        height: 0px;
+        max-height: 0px;
         opacity: 0;
-        transition: all 0.3s ease;
+        visibility: hidden;
+        transition: all 0.6s ease;
     }
 
     &.active .item-content {
-        height: auto !important;
-        opacity: 1 !important;
-        transition: all 0.3s ease;
+        max-height: 400px;
+        opacity: 1 ;
+        visibility: visible;
+        transition: all 0.6s ease;
     }
 
     &.active h4 {
@@ -1228,6 +1247,7 @@ p{
     P{
         margin-top: 30px;
         margin-bottom: 30px;
+        color:#475467;
     }
     p:first-child{
         margin-top: 0px;
@@ -1241,7 +1261,118 @@ p{
         margin-top: 100px;
         margin-bottom: 100px;
     }
+
+    ul{
+        list-style: disc;
+        font-size: 20px;
+        color:#475467;
+        padding-left: 25px;
+        margin-top: 30px;
+    }
 }
+
+#product-props{
+    .content{
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0px;
+        transition: all 0.6s ease;
+        
+        p {
+            font-size: 12px;
+            color: #475467;
+            opacity: 0.5;
+            line-height: normal;
+        }
+
+         ul {
+            list-style: disc;
+        }
+
+         li {
+            font-size: 12px;
+            color: #475467;
+            opacity: 0.5;
+        }
+    } 
+
+    &.active .content{
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+        padding-top: 20px;
+        transition: all 0.6s ease;
+    }
+
+    .title.arrow::after{
+        content: "";
+        background-image: url('../assets//images/chevron.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 15px;
+        height: 10px;
+        transition: all 0.6s ease;
+    }
+
+    &.active .arrow::after{
+        transform: rotate(-90deg);
+        transition: all 0.6s ease;
+    }
+
+    .title.arrow{
+    cursor: pointer;
+    }
+}
+
+#quality-accordion{
+    .content {
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0px;
+        transition: all 0.6s ease;
+    }
+
+    &.active .content {
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+        padding-top: 20px;
+        transition: all 0.6s ease;
+    }
+}
+
+.product-description p{
+    font-size: 14px;
+    line-height: normal;
+}
+
+.ti-widget.ti-goog{
+    padding: 0px 112px;
+}
+
+
+.privacy-policy #blog-content{
+    h2:first-child {
+        margin-top:0px
+    }
+}
+
+.colors:nth-child(2){
+    background: #97E2EC;
+}
+.colors:nth-child(3){
+    background: #DCC573;
+}
+.star-rating{
+    font-size: 18px;
+}
+
+.accordion-container{
+    height: 420px;
+}
+
 
 @keyframes dash{
     100% {
@@ -1264,6 +1395,12 @@ p{
         transform: translateX(-100%);
     }
 }
+@media screen and (max-width:1300px) {
+    .accordion-container {
+        height: 450px;
+    }
+}
+
 @media screen and (max-width:1024px){
     h1{
         color: #21316A;
@@ -1336,5 +1473,31 @@ p{
             margin-top: 50px;
             margin-bottom: 50px;
         }
+
+        ul {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+
+    .title.arrow::after {
+        top: 5px !important;
+    }
+
+    .ti-widget.ti-goog {
+        padding: 0px 30px;
+    }
+
+    .accordion-container {
+        height: 400px;
+    }
+}
+
+
+@media screen and (max-width:508px) {
+    .star-rating {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
     }
 }

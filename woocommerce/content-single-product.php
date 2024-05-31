@@ -19,10 +19,12 @@
 defined('ABSPATH') || exit;
 
 global $product;
-$gallery = $product->get_gallery_image_ids();
-$image   = $product->get_image_id();
-$title   = $product->get_title();
-$price   = $product->get_regular_price();
+$gallery        = $product->get_gallery_image_ids();
+$image          = $product->get_image_id();
+$title          = $product->get_title();
+$price          = $product->get_regular_price();
+$description    = $product->get_short_description();
+$props          = get_field("props");
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
@@ -31,8 +33,8 @@ $price   = $product->get_regular_price();
             <div class="flex flex-wrap lg:flex-nowrap gap-[90px]">
                 <div class="w-full lg:w-[55%] flex flex-nowrap gap-[12px]">
                     <div class="w-full bg-blue rounded-[21px] py-[50px] px-[20px] md:px-[40px] flex justify-center items-center">
-                        <figure class="w-[215px] lg:w-[214px] h-full md:h-[445px]">
-                            <img class="object-cover w-full !h-[354px] lg:!h-full" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
+                        <figure class="lg:w-[70%] h-auto">
+                            <img class="object-cover w-full !h-[400px] lg:!h-full" src="<?php echo wp_get_attachment_image_url($image, 'full')  ?>">
                         </figure>
                     </div>
                 </div>
@@ -45,28 +47,32 @@ $price   = $product->get_regular_price();
                         <span class="text-[12px] lg:text-[14px] text-gray">4.9 Avg. Rating</span>
                         <span class="text-[12px] lg:text-[14px] text-gray">690 Reviews</span>
                     </div>
-                    <span class="mt-[20px] text-[12px] lg:text-[14px] text-gray flex">The same active ingredient in Wegovy®* and Ozempic®* for only $xxx per Month</span>
-                    <div class="mt-[50px]">
-                        <span class="flex text-[14px] lg:text-[16px]">
-                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(3719%) hue-rotate(197deg) brightness(98%) contrast(97%);" alt="">
-                            Includes Provider and Medication </span>
-                        <span class="mt-[10px] flex text-[14px] lg:text-[16px]">
-                            <img class="mr-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(3719%) hue-rotate(197deg) brightness(98%) contrast(97%);" alt="">
-                            No hidden fees - no insurance needed 
-                        </span>
+                    <span class="product-description mt-[20px] text-[12px] lg:text-[14px] text-gray"><?php echo $description ?></span>
+                    <div class="mt-[30px] flex flex-col gap-y-[20px] h-full overflow-hidden">
+                        <?php foreach ($props as $key => $prop) : ?>
+                            <div id="product-props">
+                                <span class="title flex items-start text-[14px] lg:text-[16px] text-gray relative pr-[30px] <?php echo $prop["text"] ? "arrow"  : "" ?>">
+                                    <img class="mr-[10px] mt-[5px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(16%) saturate(3719%) hue-rotate(197deg) brightness(98%) contrast(97%);" alt="">
+                                    <?php echo $prop["title"] ?>
+                                </span>
+                                <?php if ($prop["text"]) : ?>
+                                    <div class="content text-gray pl-[30px]"><?php echo $prop["text"] ?></div>
+                                <?php endif ?>
+                            </div>
+                        <?php endforeach ?>
                     </div>
                     <div class="mt-[30px] flex justify-start">
                         <span class="text-dark-blue text-[24px] font-[600]">$<?php echo $price ?></span>
                         <span class="text-[16px] text-gray flex items-center ml-[5px]"> per month</span>
                     </div>
                     <div class="mt-[30px]">
-                        <div class=" flex justify-start flex-col">
+                        <div class=" flex items-center lg:items-start flex-col">
                             <?php do_action('woocommerce_after_shop_loop_item'); ?>
                         </div>
-                        <div class="mt-[30px]">
+                        <div class="mt-[30px] flex items-center lg:items-start flex-col">
                             <a class=" text-dark-blue w-[80%] text-[20px] font-[500] flex items-center flex-col py-[15px] px-[30px] border-[1px] border-dark-blue rounded-[70px]">
                                 3 Months Plan
-                                <span class="text-[12px] font-[400] block">Choose 3 Month Supply and save upto 20%</span>
+                                <span class="text-[10px] lg:text-[12px] font-[400] text-center block">Choose 3 Month Supply and save upto 20%</span>
                             </a>
                         </div>
                     </div>
@@ -76,7 +82,7 @@ $price   = $product->get_regular_price();
     </section>
     <div class="content">
         <section class="">
-            <div class="flex block_content px-[30px] lg:px-[112px] pb-[100px]">
+            <div class="flex block_content px-[30px] lg:px-[112px] pb-[50px]">
                 <div class="hidden md:flex w-[30%]  justify-center items-center">
                     <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
                 </div>
@@ -98,3 +104,17 @@ $price   = $product->get_regular_price();
         <?php the_content() ?>
     </div>
 </div>
+
+<script>
+    const items = document.querySelectorAll("#product-props")
+    items.forEach(item => {
+        item.querySelector(".title").addEventListener("click", () => {
+            //close the other tabs
+            items.forEach(element => {
+                if(item != element)
+                element.classList.contains("active") ? element.classList.remove("active") : ''
+            });
+            item.classList.toggle("active")
+        })
+    });
+</script>
