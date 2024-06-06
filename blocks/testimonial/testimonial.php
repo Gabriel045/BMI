@@ -43,7 +43,7 @@ $title        = get_field('title');
 $cta          = get_field('cta');
 ?>
 
-<section class="">
+<section class="hidden">
     <div class="block_content px-[30px] lg:px-[112px] py-[100px] relative">
         <div class="flex flex-wrap lg:flex-nowrap">
             <div class="w-full lg:w-[70%]">

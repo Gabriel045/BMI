@@ -1373,7 +1373,15 @@ p{
     height: 420px;
 }
 
+#icons{
+    .slick-track{
+        display: flex;
+    }
+}
 
+.\!pt-0{
+    padding-top: 0px !important
+}
 @keyframes dash{
     100% {
         stroke-dashoffset: 1200;
@@ -1398,6 +1406,19 @@ p{
 @media screen and (max-width:1300px) {
     .accordion-container {
         height: 450px;
+    }
+
+    #menu-header-menu
+    {
+        gap: 15px;
+        a {
+        font-size: 14px;
+        }
+    } 
+
+    .button-header{
+        font-size: 14px !important;
+        padding: 12px 15px;
     }
 }
 

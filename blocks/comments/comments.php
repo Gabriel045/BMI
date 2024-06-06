@@ -42,7 +42,24 @@ $cards        = get_field('cards');
 ?>
 
 <section class="bg-blue">
-    <div class=" py-[80px] relative">
+    <div class=" py-[80px] relative w-full">
+        <div class="flex block_content px-[30px] lg:px-[112px] pb-[50px]">
+            <div class="hidden md:flex w-[30%]  justify-center items-center">
+                <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
+            </div>
+            <div class="flex flex-row justify-center items-center gap-[20px] lg:gap-[30px] w-full lg:w-[40%]">
+                <figure>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/google.svg">
+                </figure>
+                <span class="text-[10px] lg:text-[14px] text-gray">4.9 Avg. Rating</span>
+                <figure>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">
+                </figure>
+            </div>
+            <div class="hidden md:flex w-[30%] justify-center items-center">
+                <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
+            </div>
+        </div>
         <div class="">
             <?php echo do_shortcode("[trustindex no-registration=google]") ?>
         </div>
@@ -50,7 +67,7 @@ $cards        = get_field('cards');
 </section>
 
 
-<script>
+<!--<script>
     jQuery(document).ready(() => {
         jQuery('#multiple-testimonials').slick({
             infinite: true,
@@ -80,4 +97,4 @@ $cards        = get_field('cards');
             ]
         });
     })
-</script>
+</script>-->

@@ -46,37 +46,47 @@ $cards        = get_field('cards');
         <!-- Desktop -->
         <div class="hidden lg:flex flex-row gap-[2%] gap-y-[100px]">
             <div class="w-[48%] flex flex-wrap flex-col justify-between ">
-                <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
-                    <h2 class="">Let’s get to know you</h2>
-                    <p class="my-[30px] text-gray text-[16px] leading-normal">First, share your health history and weight loss goals with your bmiMD affiliated provider through our confidential online questionnaire.</p>
-                    <div class="">
-                        <span class="flex text-gray text-[16px] items-center">
-                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (1).svg">
-                            Clinically proven to help lose weight
-                        </span>
-                        <span class="flex text-gray text-[16px] items-center my-[25px]">
-                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector (2).svg">
-                            Optimize results with metabolic testing
-                        </span>
-                        <span class="flex text-gray text-[16px] items-center">
-                            <img class="mr-[15px] w-[42px] h-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 212.svg">
-                            Curbs hunger to keep you feeling fuller
-                        </span>
+                <div class="h-full relative">
+                    <div class="lg:top-[80px] lg:sticky  w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
+                        <h2 class="">Let’s get to know you</h2>
+                        <div class="my-[30px] text-gray text-[16px] leading-normal">
+                            Starting at $169/month* <br>
+
+
+                            <b>Every journey is unique, and at bmiMD, we believe in offering a personalized approach tailored to your individual weight loss goals.</b>
+                            <br>
+
+                            Join the tens of thousands of members who have chosen bmiMD for the most affordable and comprehensive clinical weight loss program available.
+                            Our program includes:
+                            <br>
+                            <ul class="text-gray pl-[20px] list-disc py-[20px]">
+                                <li>Evidence-based prescription medications
+                                <li>Effectively curbs hunger to keep you feeling fuller </li>
+                                <li>Clinically proven to help lose weight </li>
+                                <li>All bmiMD programs include the cost of medication—no gimmicks </li>
+                                <li>Rooted in science and supported by results </li>
+                            </ul>
+
+                            *Offer valid for new customers at starting doses. Individual results may vary.
+
+                            ( add button - get started that goes to the treatment options below)
+
+                        </div>
                     </div>
-                </div>
-                <div class="w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px] flex flex-col">
-                    <p class="text-[18px] text-dark-blue">Lorem Ipsum</p>
-                    <h2 class="my-[30px]"> Lorem ipsum dolor sit amet consectetur.</h2>
-                    <ul class="list-disc text-[14px] text-gray pl-[20px]">
-                        <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
-                    </ul>
-                    <div class="w-full my-[30px]">
-                        <a href="/shop/" class="btn-blue">Get Started</a>
+                    <div class="hidden w-full h-fit bg-blue rounded-[21px] relative z-[99] py-[50px] px-[48px]  flex-col">
+                        <p class="text-[18px] text-dark-blue">Lorem Ipsum</p>
+                        <h2 class="my-[30px]"> Lorem ipsum dolor sit amet consectetur.</h2>
+                        <ul class="list-disc text-[14px] text-gray pl-[20px]">
+                            <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</li>
+                        </ul>
+                        <div class="w-full my-[30px]">
+                            <a href="/shop/" class="btn-blue">Get Started</a>
+                        </div>
+                        <span class="text-[13px] text-gray text-center">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</span>
+                        <span class="text-[13px] text-gray text-center mt-[30px]">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. </span>
                     </div>
-                    <span class="text-[13px] text-gray text-center">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet.</span>
-                    <span class="text-[13px] text-gray text-center mt-[30px]">Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. Lorem ipsum dolor sit amet consectetur. Odio rhoncus est tortor at imperdiet. </span>
                 </div>
                 <div class="absolute top-[300px] left-[-160px]">
                     <svg class="svg-item-bg" width="919" height="1194" viewBox="0 0 919 1194" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,14 +102,22 @@ $cards        = get_field('cards');
 
             </div>
             <div class="w-[50%] pl-[30px] flex flex-col dashed gap-y-[100px] relative">
-                <?php foreach ($cards as $key => $card) : ?>
+                <?php foreach ($cards as $key => $card) :
+                    //var_dump($card["image"]); 
+                ?>
                     <div class="dot relative">
                         <span class="flex w-fit text-[16px] lg:text-[20px] text-gray bg-blue py-[8px] px-[30px] rounded-[30px] mt-[60px] lg:mt-0">Step <?php echo $key + 1 ?></span>
                         <h2 class="my-[30px]"><?php echo $card["title"] ?></h2>
                         <p class="text-gray text-[16px] leading-normal relative z-[99]"> <?php echo  $card["text"] ?></p>
-                        <figure class="mt-[20px]">
-                            <img class="rounded-[21px] h-[400px] w-full object-cover relative z-[99]" src="<?php echo $card["image"] ?>">
-                        </figure>
+                        <?php if ($card["image"]["type"] == "image") : ?>
+                            <figure class="mt-[20px]">
+                                <img class="rounded-[21px] h-[400px] w-full object-cover relative z-[99]" src="<?php echo $card["image"]['url'] ?>">
+                            </figure>
+                        <?php else : ?>
+                            <video class="mt-[20px] rounded-[21px]" autoplay loop>
+                                <source src="<?php echo  $card["image"]["url"] ?>" type="video/mp4">
+                            </video>
+                        <?php endif ?>
                     </div>
                 <?php endforeach ?>
             </div>

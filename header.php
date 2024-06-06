@@ -13,32 +13,32 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open();
   $cta = get_field('header', 'option')["cta"]; ?>
-    <section class="bg-dark-blue">
-      <div class="all-texts flex flex-row py-[15px]">
-        <ul>
-          <?php for ($i=0; $i <= 20; $i++) { ?>
-              <li>JOIN 60k+ MEMBERS IN REACHING THEIR WEIGHT LOSS GOALS. LIMITED TIME: $100 OFF YOUR FIRST MONTH STARTING DOSE </li>
-          <?php } ?>
-        </ul>
-      </div>
-    </section>
+  <section class="bg-dark-blue">
+    <div class="all-texts flex flex-row py-[15px]">
+      <ul>
+        <?php for ($i = 0; $i <= 20; $i++) { ?>
+          <li>JOIN NOW FOR $169 ( FIRST MONTH STARTING DOSE - MEDICATION INCLUDED)</li>
+        <?php } ?>
+      </ul>
+    </div>
+  </section>
   <header class="overflow-x-clip relative flex justify-center">
     <section>
       <div class="block_content px-[30px] lg:px-[112px] py-[20px] flex flex-row z-[99]">
-        <div class="w-[60%] lg:w-[22%] xl:w-[20%] flex items-center">
-          <a href="/">
-            <figure class="w-[145px]">
-              <img class="w-full" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
+        <div class="w-[60%] lg:w-[15%] flex items-center">
+          <a class="w-full" href="/">
+            <figure class="xl:w-[145px]">
+              <img class="w-[145px] lg:w-full" src="<?php esc_url(the_field('logo', 'option')) ?>" alt="">
             </figure>
           </a>
         </div>
-        <div id="menu-dektop" class="w-[45%] xl:w-[50%] hidden lg:flex justify-start items-center gap-[25px]">
+        <div id="menu-dektop" class="w-[45%] lg:w-[55%] hidden lg:flex justify-center items-center gap-[25px]">
           <?php echo  wp_nav_menu(array(
             'menu'   => 'Header Menu',
           ));  ?>
 
         </div>
-        <div class="w-[40%] xl:w-[30%] flex  items-center justify-end gap-[10px]">
+        <div class="w-[40%] lg:w-[30%] flex  items-center justify-end gap-[10px]">
           <span class="inline-block lg:hidden cursor-pointer menu-mobile">
             <div class="" id="nav-icon4">
               <span></span>
@@ -47,10 +47,10 @@
             </div>
           </span>
           <div class="hidden lg:block w-fit">
-            <a href="/login/" class="btn-white">Sign in</a>
+            <a href="/login/" class="button-header btn-white">Sign in</a>
           </div>
           <div class="hidden lg:block w-fit">
-            <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
+            <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="button-header btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
           </div>
         </div>
       </div>

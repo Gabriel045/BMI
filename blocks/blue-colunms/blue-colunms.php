@@ -52,7 +52,7 @@ $text       = get_field('text');
                             <img src="<?php echo $card["image"] ?>" alt="">
                         </figure>
                     <?php else : ?>
-                        <div class="m-auto bg-[#E4EAFF] w-[120px] h-[120px] flex justify-center items-center p-[20px]">
+                        <div id="lottie" class="m-auto bg-[#E4EAFF] w-[120px] h-[120px] flex justify-center items-center p-[20px]">
                             <?php if ($key == 0) : ?>
                                 <lottie-player src="<?php echo get_stylesheet_directory_uri() ?>/assets/lottie/heartbeat.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></lottie-player>
                             <?php elseif ($key == 1) : ?>
@@ -79,3 +79,15 @@ $text       = get_field('text');
         <?php endif ?>
     </div>
 </section>
+<script>
+    //delete transform css property 
+    document.addEventListener("DOMContentLoaded", function() {
+        let elements = document.getElementsByTagName('lottie-player');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('play', (event) => {
+                event.target.shadowRoot.querySelector('svg').style.transform = '';
+            });
+            elements[i].play(); // trigger (again)
+        }
+    });
+</script>

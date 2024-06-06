@@ -45,10 +45,10 @@ $props          = get_field("props");
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">
                         </figure>
                         <span class="text-[12px] lg:text-[14px] text-gray">4.9 Avg. Rating</span>
-                        <span class="text-[12px] lg:text-[14px] text-gray">690 Reviews</span>
+                        <span class="text-[12px] lg:text-[14px] text-gray">800+ Reviews</span>
                     </div>
                     <span class="product-description mt-[20px] text-[12px] lg:text-[14px] text-gray"><?php echo $description ?></span>
-                    <div class="mt-[30px] flex flex-col gap-y-[20px] h-full overflow-hidden">
+                    <div class="mt-[30px] flex flex-col gap-y-[20px] overflow-hidden h-auto">
                         <?php foreach ($props as $key => $prop) : ?>
                             <div id="product-props">
                                 <span class="title flex items-start text-[14px] lg:text-[16px] text-gray relative pr-[30px] <?php echo $prop["text"] ? "arrow"  : "" ?>">
@@ -69,12 +69,12 @@ $props          = get_field("props");
                         <div class=" flex items-center lg:items-start flex-col">
                             <?php do_action('woocommerce_after_shop_loop_item'); ?>
                         </div>
-                        <div class="mt-[30px] flex items-center lg:items-start flex-col">
+                        <!--<div class="mt-[30px] flex items-center lg:items-start flex-col">
                             <a class=" text-dark-blue w-[80%] text-[20px] font-[500] flex items-center flex-col py-[15px] px-[30px] border-[1px] border-dark-blue rounded-[70px]">
                                 3 Months Plan
                                 <span class="text-[10px] lg:text-[12px] font-[400] text-center block">Choose 3 Month Supply and save upto 20%</span>
                             </a>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@ $props          = get_field("props");
                     <figure>
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Frame 13.png">
                     </figure>
-                    <span class="text-[10px] lg:text-[14px] text-gray">690 Reviews</span>
+                    <span class="text-[10px] lg:text-[14px] text-gray">800+ Reviews</span>
                 </div>
                 <div class="hidden md:flex w-[30%] justify-center items-center">
                     <div class="w-full h-[1px] bg-[#D4D4D4]"></div>
@@ -111,8 +111,8 @@ $props          = get_field("props");
         item.querySelector(".title").addEventListener("click", () => {
             //close the other tabs
             items.forEach(element => {
-                if(item != element)
-                element.classList.contains("active") ? element.classList.remove("active") : ''
+                if (item != element)
+                    element.classList.contains("active") ? element.classList.remove("active") : ''
             });
             item.classList.toggle("active")
         })

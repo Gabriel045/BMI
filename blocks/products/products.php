@@ -54,23 +54,23 @@ $text       = get_field('text');
                     <div class="flex md:flex-nowrap flex-wrap  gap-[28px] w-full <?php echo ($key % 2 == 0) ? "flex-row" :  "flex-row-reverse"  ?>">
                         <div class="w-full md:w-[40%] rounded-[20px] flex justify-center items-center bg-blue z-[99] py-[50px] lg:py-0">
                             <figure class="flex justify-center">
-                                <img class="lg:w-[215px] h-[440px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
+                                <img class="h-[440px] lg:h-[550px] object-cover" src="<?php echo  $card["image"] ?>" alt="">
                             </figure>
                         </div>
                         <div class="w-full md:w-[60%] rounded-[20px] px-[25px] lg:px-[50px] py-[50px] bg-blue z-[99]">
-                            <div class="flex xl:flex-nowrap flex-wrap flex-col-reverse lg:flex-row ">
+                            <div class="flex xl:flex-nowrap flex-wrap flex-col-reverse xl:flex-row  gap-[20px]">
                                 <div class="w-full xl:w-[70%] gap-[25px]">
                                     <h2 class="lg:text-[30px]"><?php echo $card["title"] ?></h2>
                                 </div>
-                                <div class="w-full xl:w-[30%]  xl:mt-0 flex flex-col gap-y-[17px] lg:items-end mb-[30px] lg:mb-0">
+                                <div class="w-full xl:w-[30%]  xl:mt-0 flex flex-col gap-y-[17px] xl:items-end mb-[30px] lg:mb-0">
                                     <?php foreach ($card["checks"]  as $check) :
                                         if ($check["text"] != "New") : ?>
-                                            <span class="w-fit flex text-[12px] leading-[20px] text-[#2B9606] px-[10px] py-[6px] bg-white rounded-[34px]">
+                                            <span class="w-[70%] md:w-[50%] xl:w-full flex justify-center text-[16px] xl:text-[14px] leading-[20px] text-[#2B9606] px-[10px] py-[6px] bg-white rounded-[34px]">
                                                 <?php echo $check["text"] ?>
                                                 <img class="ml-[10px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg">
                                             </span>
                                         <?php else : ?>
-                                            <span class="w-fit flex text-[12px] leading-[20px] text-white px-[20px] py-[6px] bg-[#2B9606] rounded-[34px]">
+                                            <span class="w-[70%] md:w-[50%] xl:w-full flex justify-center text-[16px] xl:text-[14px] leading-[20px] text-white px-[20px] py-[6px] bg-[#2B9606] rounded-[34px]">
                                                 <?php echo $check["text"] ?>
                                             </span>
                                         <?php endif ?>
@@ -92,9 +92,9 @@ $text       = get_field('text');
                             <div class="w-fit mt-[30px]">
                                 <a href="<?php echo esc_url($card["cta"]["url"]) ?>" target="<?php echo esc_attr($card["cta"]["target"]) ?>" class="btn-blue"><?php echo esc_attr($card["cta"]["title"]) ?></a>
                             </div>
-                            <div class="mt-[10px] flex flex-col items-center w-[60%] lg:w-[30%]">
-                                <span class="text-[#21316a79] text-[12px] block">No Hidden Fees</span>
-                                <span class="text-[#21316a79] text-[12px] block">No Insurance Needed</span>
+                            <div class="mt-[10px] flex flex-col">
+                                <span class="text-[#21316a79] text-[12px] block"> After purchasing your program, a bmiMD licensed medical provider will assess your eligibility. If you do not qualify, you will receive a refund. Our money-back guarantee ensures your satisfaction if eligibility criteria are not met.</span>
+                                <span class="text-[#21316a79] text-[10px] block">Terms and Conditions may apply</span>
                             </div>
                         </div>
                     </div>
@@ -123,10 +123,16 @@ $text       = get_field('text');
                             <h2 class="text-[24px] lg:text-[36px] leading-[30px] lg:leading-[44px]"><?php echo $card["title"] ?></h2>
                             <div class="w-full my-[30px] flex flex-row flex-wrap gap-[20px]">
                                 <?php foreach ($card["checks"]  as $check) : ?>
-                                    <span class="w-fit flex text-[14px] leading-[20px] text-gray px-[20px] py-[8px] bg-blue rounded-[34px]">
-                                        <?php echo $check["text"] ?>
-                                        <img class="ml-[10px] mt-[2px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg" style="filter: brightness(0) saturate(100%) invert(18%) sepia(10%) saturate(6847%) hue-rotate(202deg) brightness(94%) contrast(95%);">
-                                    </span>
+                                    <?php if ($check["text"] != "New") : ?>
+                                        <span class="w-fit flex text-[14px] leading-[20px] text-[#2B9606] px-[20px] py-[8px] border-[1px] border-[#2B9606] bg-white rounded-[34px]">
+                                            <?php echo $check["text"] ?>
+                                            <img class="ml-[10px] mt-[2px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/check.svg">
+                                        </span>
+                                    <?php else : ?>
+                                        <span class="w-fit flex justify-center items-center text-[14px] leading-[20px] text-white px-[20px] py-[6px] bg-[#2B9606] rounded-[34px]">
+                                            <?php echo $check["text"] ?>
+                                        </span>
+                                    <?php endif ?>
                                 <?php endforeach ?>
                             </div>
                             <p class="text-[16px] text-[#475467] leading-normal"> <?php echo $card["text"] ?></p>

@@ -43,6 +43,7 @@ $text           = get_field("text");
 $cta            = get_field("cta");
 $faqs           = get_field('faqs');
 
+$rand = rand(0, 100);
 ?>
 
 <section id="faq" style="overflow: visible;" class="<?php echo $background == "Blue"  ? 'bg-blue' : 'bg-white' ?>">
@@ -63,7 +64,7 @@ $faqs           = get_field('faqs');
                 <a href="<?php echo esc_url($cta["url"]) ?>" target="<?php echo esc_attr($cta["target"]) ?>" class="btn-blue"><?php echo esc_attr($cta["title"]) ?></a>
             </div>
         <?php endif ?>
-        <div class="mt-[50px] <?php echo $background == "Blue"  ? 'lg:mt-[112px]' : 'lg:mt-[50px]' ?> ">
+        <div class="faq-container-<?php echo $rand ?> mt-[50px] <?php echo $background == "Blue"  ? 'lg:mt-[112px]' : 'lg:mt-[50px]' ?> ">
             <?php foreach ($faqs as $key => $item) : ?>
                 <div class="slider-faq ml-[-3px] pb-[45px] mb-[45px] last:mb-0  border-b-[1px] <?php echo $background == "Blue"  ? 'border-white ' : 'border-[#E4E4E4] ' ?> z-[99] relative  inactive ">
                     <h5 class="title text-dark-blue  cursor-pointer w-[70%] lg:w-auto"><?php echo $item['title'] ?> </h5>
@@ -77,17 +78,20 @@ $faqs           = get_field('faqs');
 </section>
 
 <script>
-    const faqs = document.querySelectorAll(".slider-faq")
-    faqs.forEach(item => {
-        item.querySelector(".title").addEventListener("click", () => {
-            //close the other tabs
-            faqs.forEach(element => {
-                if (item != element)
-                    element.classList.contains("active") ? element.classList.remove("active") : ''
-            });
+    window.onload = (event) => {
+        const faqs = document.querySelectorAll(".slider-faq")
+        console.log(faqs);
+        faqs.forEach(item => {
+            item.querySelector(".title").addEventListener("click", () => {
+                //close the other tabs
+                faqs.forEach(element => {
+                    if (item != element)
+                        element.classList.contains("active") ? element.classList.remove("active") : ''
+                });
 
-            item.classList.toggle("active")
+                item.classList.toggle("active")
 
-        })
-    });
+            })
+        });
+    }
 </script>

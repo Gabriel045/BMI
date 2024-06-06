@@ -39,6 +39,7 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 
 $subtitle      = get_field('subtitle');
+$title         = get_field('title');
 $image         = get_field('image');
 ?>
 
@@ -53,11 +54,13 @@ $image         = get_field('image');
         <div class="bg-blue rounded-[21px] p-[30px] lg:p-[48px] mt-[100px] relative">
             <div class="flex flex-wrap lg:flex-nowrap gap-[80px]">
                 <figure class="lg:w-[50%]">
-                    <img class="rounded-[21px] h-[332px] w-full object-cover" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/953c1193f0f075d77de1f98a8ff82435 1.png" alt="">
+                    <img class="rounded-[21px] w-full !h-full object-cover" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/953c1193f0f075d77de1f98a8ff82435 1.png" alt="">
                 </figure>
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] justify-center">
-                    <h2>What bmiMD Prescribes</h2>
-                    <p class="text-[#82879A]">Our goal is to provide access to the most effective medication to the people who need it the most. Based on your medical history that may include:  </p>
+                    <h2>bmiMD's Mission</h2>
+                    <p class="text-[#82879A]">At bmiMD, our mission is to aid you in achieving your weight loss and metabolic goals. Through our platform, you can conveniently access cutting-edge GLP-1 medications, including compounded Semaglutide (also found in Ozempic and Wegovy) and Tirzepatide (also found in Mounjaro and Zepbound), all from your mobile device. <br>
+                        In addition to medication accessibility, we offer clinical oversight, metabolic testing as necessary, and ongoing support from board-certified physicians. Furthermore, we provide dietary guidance, and soon, HealthCoach AI will be available, alongside all the resources essential for fostering a healthier, happier lifestyle. Allow us to accompany you on the journey towards a healthier, happier you.
+                     </p>
                 </div>
             </div>
             <img class="absolute right-[-120px] top-[100px] rotate-[-184deg] scale-x-[-1] scale-y-[-1] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
@@ -65,7 +68,7 @@ $image         = get_field('image');
         <div class="bg-blue rounded-[21px] p-[30px] lg:p-[48px] mt-[20px] relative">
             <div class="flex flex-wrap md:flex-nowrap gap-[80px] flex-col-reverse lg:flex-row">
                 <div class="lg:w-[50%]  flex flex-col gap-y-[20px] justify-center">
-                    <h2>Our commitment to Compliance</h2>
+                    <h2>Our commitment to compliance</h2>
                     <p class="text-[#82879A]">Compounded semaglutide refers to a personalized medication formulated within a state Board of Pharmacy or FDA-licensed compounding facility as per a prescription provided by a licensed healthcare professional. These compounded drugs are mandated to use solely ingredients from FDA-licensed sources and undergo rigorous testing for potency, sterility, and purity.</p>
                     <p class="text-[#82879A] font-[600]">bmiMD collaborates exclusively with licensed sterile compounding pharmacies throughout the United States.</p>
                 </div>
@@ -145,7 +148,7 @@ $image         = get_field('image');
             </div>
         </div>
         <div class="mt-[100px]">
-            <h2 class="text-center">Compounded Semaglutide Dosing Plan</h2>
+            <h2 class="text-center mb-[30px]"><?php echo $title ?></h2>
             <figure class="flex justify-center">
                 <?php if (empty($image)) : ?>
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 197.svg" alt="">

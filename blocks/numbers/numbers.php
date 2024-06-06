@@ -43,6 +43,9 @@ $text        = get_field('text');
 
 <section class="">
     <div class="block_content px-[30px] lg:px-[112px] pb-[10px]">
+        <figure class="flex justify-center pb-[50px]">
+            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Group 236.svg" alt="">
+        </figure>
         <div class=" text-[#475467]">
             <?php echo $text ?>
         </div>

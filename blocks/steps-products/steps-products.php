@@ -56,11 +56,11 @@ $cta        = get_field('cta');
                 <div class="flex  flex-wrap lg:flex-nowrap <?php echo $key % 2 == 0 ? 'flex-row' : 'flex-row-reverse' ?>  gap-[60px] ">
                     <div class="w-full flex justify-center lg:w-[35%]">
                         <fugure>
-                            <img src="<?php echo $card["image"] ?>">
+                            <img class="!max-h-[484px]" src="<?php echo $card["image"] ?>">
                         </fugure>
                     </div>
                     <div class="w-full lg:w-[65%]  bg-blue px-[30px] lg:px-[60px] py-[50px] lg:py-[70px] rounded-[21px] z-[99]">
-                        <span class="text-[20px] text-[#82879A] mb-[30px] block">Step <?php echo sprintf('%02d', $key + 1); ?></span>
+                        <span class="text-[20px] text-[#82879A] mb-[30px] block">Step <?php echo $key + 1; ?></span>
                         <div class="text-[#82879A]"><?php echo $card["text"] ?></div>
                     </div>
                 </div>

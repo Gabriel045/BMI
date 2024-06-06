@@ -66,7 +66,9 @@ $cards        = get_field('cards');
             <?php endforeach ?>
         </div>
         <div class="h-[1px] bg-blue w-[50%] lg:w-[70%] absolute bottom-[130px] right-[30px] lg:right-[112px] lg:hidden block"> </div>
-        <div class="h-[1px] w-[100%] bg-[#E4E4E4] bottom-0 hidden lg:block"> </div>
+        <?php if(!is_page("shop")): ?>
+            <div class="h-[1px] w-[100%] bg-[#E4E4E4] bottom-0 hidden lg:block"> </div>
+        <?php endif ?>
         <img class="absolute right-0 lg:top-[22px] lg:bottom-auto bottom-[-190px] rotate-[205deg] lg:rotate-[15deg] " src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
         <img class="absolute left-[-50px] bottom-[-15px] rotate-[-170deg] hidden lg:block" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Vector 9.png">
     </div>
